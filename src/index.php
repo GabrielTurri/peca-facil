@@ -12,7 +12,7 @@
 <body class="bg-light">
 <div class="content-wraper">
   <div class="d-flex flex-row justify-content-between align-items-center pt-2">
-    <h3>Peça Fácil</h3>
+  <a href="index.php"><h3>Peça Fácil</h3></a>
     <div class="d-flex flex-row">
       <input type="text" class="rounded-start border py-2 search-input">
       <button class="rounded-end border-0 px-2">
@@ -55,7 +55,7 @@
     }
 
     foreach($json_data as $produto){
-      echo "<a href='produto.html'>
+      echo "<a href='produto.php?id={$produto['id']}'>
       <div class='product-card bg-white d-flex flex-column rounded p-2'>
         <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
         <span class='fw-bold'>{$produto['nome']}</span>
@@ -63,12 +63,9 @@
       </div>
     </a>";
     }
-
   ?>
   </div>
 
-  <footer></footer>
-  
-  
+  <footer></footer>  
 </body>
 </html>
