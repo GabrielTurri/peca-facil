@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.botao-entrar {
+  width: 160px;
+}
+
+.content-wraper {
+  /* min-width: 800px; */
+  width: 70%;
+  margin: 0 auto;
+}
+.imagem {
+  width: 250px;
+  height: 250px;
+  background-color: #D2D2D2;
+}
+
+.icon {
+  width: 20px;
+}
