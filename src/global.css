@@ -21,3 +21,9 @@ a {
 .icon {
   width: 20px;
 }
+
+.product-card {
+  width: 266px;
+  overflow-wrap: break-word;
+
+}
