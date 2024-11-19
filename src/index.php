@@ -14,10 +14,14 @@
   <div class="d-flex flex-row justify-content-between align-items-center pt-2">
   <a href="index.php"><h3>Peça Fácil</h3></a>
     <div class="d-flex flex-row">
-      <input type="text" class="rounded-start border py-2 search-input">
-      <button class="rounded-end border-0 px-2">
+      <form action="" method="POST">
+        <input type="text" name="busca" class="rounded-start border py-2 search-input" autofocus placeholder="Digite o que procura...">
+        
+        <button class="rounded-end border-0 px-2">
           <img src="./assets/icons/magnifying-glass-solid.svg" class="icon botao-pesquisar" alt="">
-      </button>
+        </button>
+      </form>
+
     </div>
     <div class="d-flex flex-row gap-2">
       <img src="./assets/icons/heart-regular.svg" class="icon" alt="">
@@ -49,19 +53,86 @@
       die("Erro ao ler o json");
     }
 
-    $json_data = json_decode($json, true);
-    if ($json_data === null){
-      die("Erro ao decodificar json_data");
+    $produtos = json_decode($json, true);
+    if ($produtos === null){
+      die("Erro ao decodificar produtos");
     }
 
-    foreach($json_data as $produto){
-      echo "<a href='produto.php?id={$produto['id']}'>
-      <div class='product-card bg-white d-flex flex-column rounded p-2'>
-        <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
-        <span class='fw-bold'>{$produto['nome']}</span>
-        <span>R$1,00</span>
-      </div>
-    </a>";
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $valorProcurado = $_POST['busca'];
+
+      $encontrado = 0;
+                 
+      // Verificar se a decodificação foi bem-sucedida
+      if ($produtos === null) {
+        die('Erro ao ler o arquivo JSON');
+      }
+
+      // Procurar o produto pelo nome
+      foreach ($produtos as $produto) {
+        $soma_preco = 0;
+        $preco_medio = 0;
+        $qtde_lojas = 0;
+        $menor_preco = 99999;
+        $loja_menor_preco = "";
+        
+        foreach($produto['lojas'] as $loja){
+          $soma_preco += $loja['preco'];
+          $qtde_lojas +=1;
+
+          if($loja['preco'] < $menor_preco){
+            $menor_preco = $loja['preco'];
+            $loja_menor_preco = $loja['loja'];
+          }
+        }
+
+        $preco_medio = round($soma_preco/$qtde_lojas,2);
+        if(stripos($produto['nome'], $valorProcurado) !== false){
+          echo "<a href='produto.php?id={$produto['id']}'>
+            <div class='product-card bg-white d-flex flex-column rounded p-2'>
+              <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
+              <span class='fw-bold'>{$produto['nome']}</span>
+              <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
+              <span>Preço Médio - R$".$preco_medio."</span>
+            </div>
+          </a>";
+          $encontrado += 1;
+        } 
+      }  
+      if ($encontrado == 0){
+        echo "<h3>Produto não encontrado!</h3>";
+      }
+    }
+    else{
+      
+      // criar o card de cada produto
+      foreach($produtos as $produto){
+        // Achar preço médio do produto nas lojas que possuem ele
+        $soma_preco = 0;
+        $preco_medio = 0;
+        $qtde_lojas = 0;
+        $menor_preco = 99999;
+        $loja_menor_preco = "";
+        
+        foreach($produto['lojas'] as $loja){
+          $soma_preco += $loja['preco'];
+          $qtde_lojas +=1;
+
+          if($loja['preco'] < $menor_preco){
+            $menor_preco = $loja['preco'];
+            $loja_menor_preco = $loja['loja'];
+          }
+        }
+        $preco_medio = round($soma_preco/$qtde_lojas,2);
+        echo "<a href='produto.php?id={$produto['id']}'>
+        <div class='product-card bg-white d-flex flex-column rounded p-2'>
+          <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
+          <span class='fw-bold'>{$produto['nome']}</span>
+          <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
+          <span>Preço Médio - R$".$preco_medio."</span>
+        </div>
+      </a>";
+      }
     }
   ?>
   </div>
