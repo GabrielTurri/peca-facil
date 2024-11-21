@@ -1,4 +1,12 @@
 <?php
+
+  // Verificar se o parâmetro 'categoria' foi passado na URL
+  if (!isset($_GET['categoria'])) {
+    die('categoria do produto não especificado.');
+  }
+
+  // Obter o categoria do produto da URL
+  $categoria_produto = $_GET['categoria'];
   $json = file_get_contents("produtos.json");
 
   if ($json === false) {
@@ -12,6 +20,7 @@
 
   $tipos_hardwares = [];
   $tipos_perifericos = [];
+  
   // Procurar o produto pela categoria
   foreach ($produtos as $produto) { 
     if($produto['categoria'] == "hardware"){
@@ -100,12 +109,14 @@
     <a href="#">Lojas Parceiras</a>
   </div>
   
-  <h2>Produtos em destaque</h2>
+  <?php
+    echo "<h1>Categoria selecionada: ".ucfirst($categoria_produto)."</h1>";
+  ?><h2></h2>
   <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center">
   <?php
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $valorProcurado = $_POST['busca'];
+    
+      $valorProcurado = $categoria_produto;
 
       $encontrado = 0;
                  
@@ -114,7 +125,7 @@
         die('Erro ao ler o arquivo JSON');
       }
 
-      // Procurar o produto pelo nome
+      // Procurar o produto pela categoria
       foreach ($produtos as $produto) {
         $soma_preco = 0;
         $preco_medio = 0;
@@ -133,7 +144,7 @@
         }
 
         $preco_medio = round($soma_preco/$qtde_lojas,2);
-        if(stripos($produto['nome'], $valorProcurado) !== false){
+        if($valorProcurado == $produto['tipo']) {
           echo "<a href='produto.php?id={$produto['id']}'>
             <div class='product-card bg-white d-flex flex-column rounded p-2'>
               <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
@@ -145,41 +156,8 @@
           $encontrado += 1;
         } 
       }  
-      if ($encontrado == 0){
-        echo "<h3>Produto não encontrado!</h3>";
-      }
-    }
-    else{
-      
-      // criar o card de cada produto
-      foreach($produtos as $produto){
-        // Achar preço médio do produto nas lojas que possuem ele
-        $soma_preco = 0;
-        $preco_medio = 0;
-        $qtde_lojas = 0;
-        $menor_preco = 99999;
-        $loja_menor_preco = ""; 
-        
-        foreach($produto['lojas'] as $loja){
-          $soma_preco += $loja['preco'];
-          $qtde_lojas +=1;
-
-          if($loja['preco'] < $menor_preco){
-            $menor_preco = $loja['preco'];
-            $loja_menor_preco = $loja['loja'];
-          }
-        }
-        $preco_medio = round($soma_preco/$qtde_lojas,2);
-        echo "<a href='produto.php?id={$produto['id']}'>
-        <div class='product-card bg-white d-flex flex-column rounded p-2'>
-          <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
-          <span class='fw-bold'>{$produto['nome']}</span>
-          <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
-          <span>Preço Médio - R$".$preco_medio."</span>
-        </div>
-      </a>";
-      }
-    }
+   
+    
   ?>
   </div>
 
