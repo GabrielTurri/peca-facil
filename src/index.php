@@ -44,22 +44,20 @@
 <div class="content-wraper">
   <div class="d-flex flex-row justify-content-between align-items-center pt-2">
   <a href="index.php"><h3>Peça Fácil</h3></a>
-    <div class="d-flex flex-row">
 
-      <form action="pesquisa.php" method="POST">
-        <input type="text" name="busca" class="rounded-start border p-2 search-input" autofocus placeholder="Digite o que procura...">
+      <form class="d-flex flex-row search-input flex-grow-1" action="pesquisa.php" method="POST">
+        <input type="text" name="busca" class="rounded-start border p-2 d-flex flex-grow-1" autofocus placeholder="Digite o que procura...">
         
         <button class="rounded-end border-0 px-3 botao-pesquisar">
           <img src="./assets/icons/magnifying-glass-solid.svg" class="icon" alt="">
         </button>
       </form>
 
-    </div>
-    <div class="d-flex flex-row gap-2">
+    <div class="d-flex flex-row gap-3">
       <img src="./assets/icons/heart-regular.svg" class="icon" alt="">
       <img src="./assets/icons/bell-regular.svg" class="icon" alt="">
 
-      <a href="login.html">
+      <a href="login.php">
           <div class="botao-entrar d-flex flex-row">
             <img src="./assets/icons/user-regular.svg" class="icon" alt="">
             <span>Entrar ou fazer cadastro</span>
@@ -68,10 +66,12 @@
     </div>
 
   </div>
+  <hr>
+
   <div class="d-flex flex-row justify-content-around align-items-center gap-2 my-4">
 
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="dropdown-button menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Hardware
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -83,10 +83,10 @@
 
       </div>
     </div>
-    
+    <div class="linha-vertical"> </div>
 
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="dropdown-button menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Periféricos
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -98,13 +98,16 @@
 
       </div>
     </div>
-    <a href="#">Ofertas</a>
-    <a href="#">Cupons</a>
-    <a href="lojas.php">Lojas Parceiras</a>
+    <div class="linha-vertical"> </div>
+    <a class="menu-item" href="#">Ofertas</a>
+    <div class="linha-vertical"> </div>
+    <a class="menu-item" href="#">Cupons</a>
+    <div class="linha-vertical"> </div>
+    <a class="menu-item" href="lojas.php">Lojas Parceiras</a>
   </div>
   
   <h2>Produtos em destaque</h2>
-  <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center">
+  <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center align-items-start">
   <?php
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
