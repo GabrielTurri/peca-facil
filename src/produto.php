@@ -45,7 +45,7 @@ if ($produto === null) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peça Fácil</title>
 </head>
-<body class="bg-light">
+<body>
 <div class="content-wraper">
   <div class="d-flex flex-row justify-content-between align-items-center pt-2">
     
