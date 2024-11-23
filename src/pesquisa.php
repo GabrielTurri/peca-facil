@@ -1,32 +1,10 @@
 <?php
-  $json = file_get_contents("produtos.json");
-
-  if ($json === false) {
-    die("Erro ao ler o json");
-  }
-
-  $produtos = json_decode($json, true);
-  if ($produtos === null){
-    die("Erro ao decodificar produtos");
-  }
-
-  $tipos_hardwares = [];
-  $tipos_perifericos = [];
-
-  // Procurar o produto pela categoria
-  foreach ($produtos as $produto) { 
-    if($produto['categoria'] == "hardware"){
-      if(in_array($produto['tipo'], $tipos_hardwares)){
-      } else{
-        array_push($tipos_hardwares, $produto['tipo']);
-      }
-    } else if($produto['categoria'] == "periferico"){
-      if(in_array($produto['tipo'], $tipos_perifericos)){
-      } else{
-        array_push($tipos_perifericos, $produto['tipo']);
-      }
-    }
-  }
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+  // Redireciona para uma página dentro do mesmo site
+  header("Location: index.php");
+  exit;
+  
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +23,6 @@
   <div class="d-flex flex-row justify-content-between align-items-center pt-2">
   <a href="index.php"><h3>Peça Fácil</h3></a>
     <div class="d-flex flex-row">
-
       <form action="pesquisa.php" method="POST">
         <input type="text" name="busca" class="rounded-start border py-2 search-input" autofocus placeholder="Digite o que procura...">
         
@@ -102,14 +79,22 @@
     <a href="lojas.php">Lojas Parceiras</a>
   </div>
   
-  <h2>Produtos em destaque</h2>
+  <h2>Resultados da Pesquisa:</h2>
   <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center">
   <?php
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $json = file_get_contents("produtos.json");
+
+      if ($json === false) {
+        die("Erro ao ler o json");
+      }
+
       $valorProcurado = $_POST['busca'];
 
       $encontrado = 0;
+
+      $produtos = json_decode($json, true);
                  
       // Verificar se a decodificação foi bem-sucedida
       if ($produtos === null) {
@@ -152,35 +137,8 @@
       }
     }
     else{
-      
-      // criar o card de cada produto
-      foreach($produtos as $produto){
-        // Achar preço médio do produto nas lojas que possuem ele
-        $soma_preco = 0;
-        $preco_medio = 0;
-        $qtde_lojas = 0;
-        $menor_preco = 99999;
-        $loja_menor_preco = ""; 
-        
-        foreach($produto['lojas'] as $loja){
-          $soma_preco += $loja['preco'];
-          $qtde_lojas +=1;
-
-          if($loja['preco'] < $menor_preco){
-            $menor_preco = $loja['preco'];
-            $loja_menor_preco = $loja['loja'];
-          }
-        }
-        $preco_medio = round($soma_preco/$qtde_lojas,2);
-        echo "<a href='produto.php?id={$produto['id']}'>
-        <div class='product-card bg-white d-flex flex-column rounded p-2'>
-          <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
-          <span class='fw-bold'>{$produto['nome']}</span>
-          <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
-          <span>Menor Preço - R$".$menor_preco."</span>
-        </div>
-      </a>";
-      }
+      header("Location: index.php");
+      exit;
     }
   ?>
   </div>
