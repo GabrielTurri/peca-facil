@@ -39,16 +39,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peça Fácil</title>
 </head>
-<body class="bg-light">
+<body>
 <div class="content-wraper">
   <div class="d-flex flex-row justify-content-between align-items-center pt-2">
   <a href="index.php"><h3>Peça Fácil</h3></a>
     <div class="d-flex flex-row">
       <form action="" method="POST">
-        <input type="text" name="busca" class="rounded-start border py-2 search-input" autofocus placeholder="Digite o que procura...">
+        <input type="text" name="busca" class="rounded-start border p-2 search-input" autofocus placeholder="Digite o que procura...">
         
-        <button class="rounded-end border-0 px-2">
-          <img src="./assets/icons/magnifying-glass-solid.svg" class="icon botao-pesquisar" alt="">
+        <button class="rounded-end border-0 px-3 botao-pesquisar">
+          <img src="./assets/icons/magnifying-glass-solid.svg" class="icon" alt="">
         </button>
       </form>
 
@@ -66,7 +66,7 @@
     </div>
 
   </div>
-  <div class="d-flex flex-row justify-content-around gap-2 my-4">
+  <div class="d-flex flex-row justify-content-around align-items-center gap-2 my-4">
 
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,6 +81,7 @@
 
       </div>
     </div>
+    
 
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

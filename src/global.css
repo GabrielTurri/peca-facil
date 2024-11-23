@@ -1,3 +1,7 @@
+body {
+  background-color: #D2D2D2;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -5,6 +9,11 @@ a {
 
 .botao-entrar {
   width: 160px;
+}
+
+.botao-pesquisar {
+  height: 100%;
+  background-color: #0096C7;
 }
 
 .content-wraper {
