@@ -74,7 +74,7 @@ if ($produto === null) {
     <a href="#">Periféricos</a>
     <a href="#">Ofertas</a>
     <a href="#">Cupons</a>
-    <a href="#">Lojas Parceiras</a>
+    <a href="lojas.php">Lojas Parceiras</a>
   </div>
   <?php
     echo "<h1>{$produto['nome']}</h1>";
@@ -84,14 +84,20 @@ if ($produto === null) {
     $soma_preco = 0;
     $preco_medio = 0;
     $qtde_lojas = 0;
+    $menor_preco = 99999;
+    $loja_menor_preco = ""; 
+    $link_loja = "";
 
     foreach($produto['lojas'] as $loja){
+      if($loja['preco'] < $menor_preco){
+        $menor_preco = $loja['preco'];
+        $loja_menor_preco = $loja['loja'];
+        $link_loja = $loja['link'];
 
-        $soma_preco += $loja['preco'];
-        $qtde_lojas +=1;
+      }
     }
-    $preco_medio = round($soma_preco/$qtde_lojas,2);
-    echo "<h4>Preço médio do produto nas lojas: R$".$preco_medio."</h4>";
+    echo "<h4>Melhor oferta: R$".$menor_preco." em <a href='{$link_loja}' target='_blank'>{$loja_menor_preco}</a></h4>";
+
 
     echo "<h3>Descrição do produto:</h3>";
     foreach($produto['descricao'] as $descricao){
@@ -104,6 +110,7 @@ if ($produto === null) {
                 <h3>{$loja['loja']}</h3>
                 <h4>Preço: {$loja['preco']}</h4>
                 <h5>Clique para ir para a loja!!!</h5>
+                <img src='{$loja['icone']}' alt='logo da loja'>
             </a></div>";
     }     
   ?>

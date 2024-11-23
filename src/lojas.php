@@ -1,4 +1,6 @@
 <?php
+  include_once("classes.php");
+
   $json = file_get_contents("produtos.json");
 
   if ($json === false) {
@@ -12,6 +14,11 @@
 
   $tipos_hardwares = [];
   $tipos_perifericos = [];
+  $lista_lojas = [];
+  $lojas = [];
+
+
+
   // Procurar o produto pela categoria
   foreach ($produtos as $produto) { 
     if($produto['categoria'] == "hardware"){
@@ -23,6 +30,19 @@
       if(in_array($produto['tipo'], $tipos_perifericos)){
       } else{
         array_push($tipos_perifericos, $produto['tipo']);
+      }
+    }
+
+    // salvar lojas no array das lojas
+    foreach($produto['lojas'] as $loja){
+      if(!in_array($loja['loja'], $lista_lojas)){
+        array_push($lista_lojas, trim($loja['loja']));
+
+        $parse_url = parse_url($loja['link']);
+        $link_loja = $parse_url['scheme'] . '://' . $parse_url['host'];
+        $nova_loja = new Loja($loja['loja'], $link_loja, $loja['icone']);
+
+        array_push($lojas, $nova_loja);
       }
     }
   }
@@ -100,89 +120,19 @@
     <a href="lojas.php">Lojas Parceiras</a>
   </div>
   
-  <h2>Produtos em destaque</h2>
+  <h2>Lojas Parceiras</h2>
   <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center">
   <?php
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $valorProcurado = $_POST['busca'];
-
-      $encontrado = 0;
-                 
-      // Verificar se a decodificação foi bem-sucedida
-      if ($produtos === null) {
-        die('Erro ao ler o arquivo JSON');
-      }
-
-      // Procurar o produto pelo nome
-      foreach ($produtos as $produto) {
-        $soma_preco = 0;
-        $preco_medio = 0;
-        $qtde_lojas = 0;
-        $menor_preco = 99999;
-        $loja_menor_preco = "";
-        
-        foreach($produto['lojas'] as $loja){
-          $soma_preco += $loja['preco'];
-          $qtde_lojas +=1;
-
-          if($loja['preco'] < $menor_preco){
-            $menor_preco = $loja['preco'];
-            $loja_menor_preco = $loja['loja'];
-          }
-        }
-
-        $preco_medio = round($soma_preco/$qtde_lojas,2);
-        if(stripos($produto['nome'], $valorProcurado) !== false){
-          echo "<a href='produto.php?id={$produto['id']}'>
-            <div class='product-card bg-white d-flex flex-column rounded p-2'>
-              <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
-              <span class='fw-bold'>{$produto['nome']}</span>
-              <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
-              <span>Menro Preço - R$".$menor_preco."</span>
-            </div>
-          </a>";
-          $encontrado += 1;
-        } 
-      }  
-      if ($encontrado == 0){
-        echo "<h3>Produto não encontrado!</h3>";
-      }
-    }
-    else{
+  // mostar cada loja no array lojas
+    foreach ($lojas as $loja) {
+        echo "<a href='{$loja->link}' target='_blank'>
+          <h2>{$loja->nome}</h2>
+          <img src='{$loja->icone}' alt='Icone da loja'>
+        </a>";
       
-      // criar o card de cada produto
-      foreach($produtos as $produto){
-        // Achar preço médio do produto nas lojas que possuem ele
-        $soma_preco = 0;
-        $preco_medio = 0;
-        $qtde_lojas = 0;
-        $menor_preco = 99999;
-        $loja_menor_preco = ""; 
-        
-        foreach($produto['lojas'] as $loja){
-          $soma_preco += $loja['preco'];
-          $qtde_lojas +=1;
-
-          if($loja['preco'] < $menor_preco){
-            $menor_preco = $loja['preco'];
-            $loja_menor_preco = $loja['loja'];
-          }
-        }
-        $preco_medio = round($soma_preco/$qtde_lojas,2);
-        echo "<a href='produto.php?id={$produto['id']}'>
-        <div class='product-card bg-white d-flex flex-column rounded p-2'>
-          <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
-          <span class='fw-bold'>{$produto['nome']}</span>
-          <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
-          <span>Menor Preço - R$".$menor_preco."</span>
-        </div>
-      </a>";
-      }
-    }
+    }  
   ?>
   </div>
-
   <footer></footer>  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
