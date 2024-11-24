@@ -46,13 +46,13 @@
 </head>
 <body>
 <div class="content-wraper">
-  <div class="d-flex flex-row justify-content-between align-items-center pt-2">
-  <a href="index.php"><h3>Peça Fácil</h3></a>
+  <div class="d-flex flex-row header">
+    <a href="index.php"><h3>Peça Fácil</h3></a>
 
-      <form class="d-flex flex-row search-input flex-grow-1" action="pesquisa.php" method="POST">
-        <input type="text" name="busca" class="rounded-start border p-2 d-flex flex-grow-1" autofocus placeholder="Digite o que procura...">
+      <form class="d-flex flex-row search-input" action="pesquisa.php" method="POST">
+        <input type="text" name="busca" class="input-pesquisar" autofocus placeholder="Digite o que procura...">
         
-        <button class="rounded-end border-0 px-3 botao-pesquisar">
+        <button class="botao-pesquisar">
           <img src="./assets/icons/magnifying-glass-solid.svg" class="icon" alt="">
         </button>
       </form>
@@ -72,7 +72,7 @@
   </div>
   <hr>
 
-  <div class="d-flex flex-row justify-content-around align-items-center gap-2 my-4">
+  <div class="d-flex flex-row navbar">
 
     <div class="dropdown">
       <button class="dropdown-button menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -109,8 +109,10 @@
     <div class="linha-vertical"> </div>
     <a class="menu-item" href="lojas.php">Lojas Parceiras</a>
   </div>
+</div>
+<div class="content-wraper">
   
-  <h2>Produtos em destaque</h2>
+  <h3>Produtos em destaque</h3>
   <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center align-items-start">
   <?php
 
@@ -145,7 +147,7 @@
         $preco_medio = round($soma_preco/$qtde_lojas,2);
         if(stripos($produto['nome'], $valorProcurado) !== false){
           echo "<a href='produto.php?id={$produto['id']}'>
-            <div class='product-card bg-white d-flex flex-column rounded p-2'>
+            <div class='product-card d-flex flex-column rounded p-2'>
               <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
               <span class='fw-bold'>{$produto['nome']}</span>
               <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>

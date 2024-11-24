@@ -54,30 +54,33 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="global.css">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peça Fácil</title>
 </head>
-<body class="bg-light">
+<body>
 <div class="content-wraper">
-  <div class="d-flex flex-row justify-content-between align-items-center pt-2">
-  <a href="index.php"><h3>Peça Fácil</h3></a>
-    <div class="d-flex flex-row">
-      <form action="" method="POST">
-        <input type="text" name="busca" class="rounded-start border py-2 search-input" autofocus placeholder="Digite o que procura...">
+  <div class="d-flex flex-row header">
+    <a href="index.php"><h3>Peça Fácil</h3></a>
+
+      <form class="d-flex flex-row search-input" action="pesquisa.php" method="POST">
+        <input type="text" name="busca" class="input-pesquisar" autofocus placeholder="Digite o que procura...">
         
-        <button class="rounded-end border-0 px-2">
-          <img src="./assets/icons/magnifying-glass-solid.svg" class="icon botao-pesquisar" alt="">
+        <button class="botao-pesquisar">
+          <img src="./assets/icons/magnifying-glass-solid.svg" class="icon" alt="">
         </button>
       </form>
 
-    </div>
-    <div class="d-flex flex-row gap-2">
+    <div class="d-flex flex-row gap-3">
       <img src="./assets/icons/heart-regular.svg" class="icon" alt="">
       <img src="./assets/icons/bell-regular.svg" class="icon" alt="">
 
-      <a href="login.html">
+      <a href="login.php">
           <div class="botao-entrar d-flex flex-row">
             <img src="./assets/icons/user-regular.svg" class="icon" alt="">
             <span>Entrar ou fazer cadastro</span>
@@ -86,10 +89,12 @@
     </div>
 
   </div>
-  <div class="d-flex flex-row justify-content-around gap-2 my-4">
+  <hr>
+
+  <div class="d-flex flex-row navbar">
 
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="dropdown-button menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Hardware
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -101,9 +106,10 @@
 
       </div>
     </div>
+    <div class="linha-vertical"> </div>
 
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="dropdown-button menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Periféricos
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -115,20 +121,29 @@
 
       </div>
     </div>
-    <a href="#">Ofertas</a>
-    <a href="#">Cupons</a>
-    <a href="lojas.php">Lojas Parceiras</a>
+    <div class="linha-vertical"> </div>
+    <a class="menu-item" href="#">Ofertas</a>
+    <div class="linha-vertical"> </div>
+    <a class="menu-item" href="#">Cupons</a>
+    <div class="linha-vertical"> </div>
+    <a class="menu-item" href="lojas.php">Lojas Parceiras</a>
   </div>
-  
-  <h2>Lojas Parceiras</h2>
+</div>
+<div class="content-wraper mt-4">
+  <h4 class="text-center">Lojas Parceiras</h4>
   <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center">
   <?php
   // mostar cada loja no array lojas
     foreach ($lojas as $loja) {
-        echo "<a href='{$loja->link}' target='_blank'>
-          <h2>{$loja->nome}</h2>
-          <img src='{$loja->icone}' alt='Icone da loja'>
-        </a>";
+        echo "
+        <a href='{$loja->link}' target='_blank'>
+          <div class='bg-white p-3 rounded text-center card-loja'>
+            <img class='logo-loja' src='{$loja->icone}' alt='Icone da loja'>
+            <h3>{$loja->nome}</h3>
+          </div>
+        </a>
+        
+        ";
       
     }  
   ?>
