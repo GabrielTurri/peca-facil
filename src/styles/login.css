@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.sm-text {
+  font-size: 14px;
+}
+body {
+  background-color: #D2D2D2;
+  height: 100vh;
+}
+
+.navbar {
+  padding: 32px;
+  background-color: #eee;
+}
+
+.navbar a {
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.login-container, .login-content, .campo, .opcoes {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container {
+  width: 736px;
+  background-color: #fff;
+  border-radius: 8px;
+  
+  padding: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-content {
+  margin: 0 auto;
+  width: 20rem;
+  gap: 16px;
+}
+
+.campo {
+  gap: 4px;
+}
+
+.campo input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+
+.botao-entrar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold; 
+}
+
+.botao-entrar {
+  background-color: #0096C7;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.botao-entrar:hover {
+  background-color: #038cb9;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.opcoes{
+  text-align: center;
+  gap: 8px;
+  margin: 8px 0;
+}
