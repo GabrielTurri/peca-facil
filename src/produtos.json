@@ -1,0 +1,120 @@
+
+    {
+       "produto1":
+       {"id":1,
+            "nome": "Mouse Gamer Sem Fio Logitech G305 LIGHTSPEED",
+            "tipo": "mouse",
+            "categoria": "periferico",
+            "imagem":"https://images2.kabum.com.br/produtos/fotos/97092/97092_1_1528977678_g.jpg",
+            "descricao":["O G305 apresenta o sensor HERO de última geração com sensibilidade de 200 a 12.000 DPI para precisão de nível de competição. A tecnologia sem fio LIGHTSPEED oferece desempenho super rápido de 1ms. Com incrível eficiência de energia, o G305 permanece ligado e p  ronto para jogar por até 250 horas com uma única pilha AA inclusa. Jogue em qualquer lugar com este mouse para jogos ultra-portátil e leve que pesa apenas 99 gramas, é fácil de transportar com você e tem armazenamento integrado para o receptor sem fio USB incluso. Use o Software Logitech G HUB para programar rapidamente os 6 botões com comandos instantâneos, configurações de DPI e muito mais. O G305 é o mouse sem fio LIGHTSPEED para todos."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":275.99, 
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/97092/mouse-gamer-sem-fio-logitech-g305-lightspeed-com-6-botoes-programaveis-e-ate-12-000-dpi-preto-910-005281?utm_id=21416437422&gad_source=1&gclid=CjwKCAiAudG5BhAREiwAWMlSjB4SOdO1I-Sv03-c9FI0NtIaWt0JO03KdVyN5nMUPv8ZHRKEdgGe0xoCmO0QAvD_BwE"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco":287.99, 
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+                    "link": "https://www.pichau.com.br/mouse-gamer-logitech-g305-wireless-12000-dpi-6-botoes-preto-910-005281"
+                },
+                {
+                    "loja":"Fastshop", 
+                    "preco":259.99, 
+                    "icone": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwGzyuxhRtk6tB2IdqMqMjl1bszBv8DBr_w&s",
+                    "link": "https://site.fastshop.com.br/mouse-optico-sem-fio-para-jogos-lightspeed-preto---logitech-g---g305-log305lighpto_prd/p?utm_source=google&utm_medium=cpc&utm_term=pmax_1p&utm_campaign=17335193922&gad_source=1&gclid=CjwKCAiAudG5BhAREiwAWMlSjDM3FspLKz7_LLn1Kx-PGti1XhLNSXsZV9XZ3Blq3JDPFP1t7yjmVRoCuAYQAvD_BwE"
+                }]            
+        },
+        "produto2":
+        {"id":2,
+            "nome": "Placa de Vídeo RTX4060",
+            "tipo": "placa de vídeo",
+            "categoria": "hardware",
+            "imagem":"https://images4.kabum.com.br/produtos/fotos/520724/placa-de-video-rtx4060-1-click-oc-2x-teclab-lite-galax-nvidia-geforce-_1708435296_g.jpg",
+            "descricao":["Equipada com uma memória GDDR17 de 8 Gbps 128GB e 6 bits, a GeForce RTX 4060 1-Click OC 2X suporta até 2490MHz para o seu exclusivo OC de 1 clique, com um cooler de slot duplo leve e as ventoinhas duplas de 92 mm, tornando-se o 2º design mais compacto das placas gráficas GALAX GeForce RTX série 40. Com o design ultra-eficiente do refrigerador, proporciona desempenhos impressionantes à temperatura ideal, mantendo uma operação extremamente silenciosa.", "Suportado pelo aplicativo Xtreme Tuner para OC móvel de 1 clique, exibição de informações da GPU na tela e configurações avançadas de OC.","Equipadas com NVIDIA DLSS 3, arquitetura ultraeficiente Ada Lovelace e ray tracing completo de RTX, as placas gráficas GeForce RTX Série 40 são muito rápidas, proporcionando aos jogadores e criadores um salto quântico em desempenho, gráficos com tecnologia Al e muito mais. capacidades da plataforma. Este enorme avanço na tecnologia GPU é a porta de entrada para as experiências de jogo mais envolventes, recursos Al incríveis e fluxos de trabalho de criação de conteúdo mais rápidos. Essas GPUs levam gráficos de última geração para o futuro."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":1899.99, 
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/520724/placa-de-video-rtx4060-1-click-oc-2x-teclab-lite-galax-nvidia-geforce-8gb-gddr6-g-sync-dlss-ray-tracing?utm_id=21416437563&gad_source=1&gclid=CjwKCAiAudG5BhAREiwAWMlSjMAejPHaFmIfVJgh83tDGcIGybWOqXK6i9rpPSpVNHhfeXED0I__SxoC_dsQAvD_BwE"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco":2699.99, 
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+
+                    "link": "https://www.pichau.com.br/placa-de-video-asus-geforce-rtx-4060-ti-oc-dual-edition-8gb-gddr6-128-bit-dual-rtx4060ti-o8g-evo"
+                }]            
+        },
+
+        "produto3":
+        {"id":3,
+            "nome": "Fonte XPG Kyber",
+            "tipo": "fonte",
+            "categoria": "hardware",
+            "imagem":"https://images3.kabum.com.br/produtos/fotos/471343/fonte-xpg-kyber-850w-80-plus-gold-bivolt-preto-kyber850g-bkcbr_1698434934_g.jpg",
+            "descricao":["As unidades de fonte de alimentação KYBER aderem às especificações do guia de design Intel ATX 3.0 e oferecem um conector 12VHPWR na categoria de 750 e 850 watts. A KYBER pode suportar as placas gráficas mais recentes, e é feita especificamente para aqueles que exigem alta capacidade gráfica e desempenho.","A SÉRIE XPG KYBER é certificada pela Cybenetics por sua eficiência e nível de ruído, ficando no topo de sua categoria nos padrões ETA e LAMBDA.  Para obter mais informações, visite Cybenetics Labs – Certificações de eficiência e nível de ruído XPG PSU.","As unidades de fonte de alimentação da série KYBER são certificadas GOLD pela 80 PLUS, alcançando até 91,40% (115V) de eficiência com 50% de carga.", "A curva de ventoinha inteligente garante uma operação silenciosa na maioria dos cenários do usuário. Ao iniciar o controle da ventoinha em baixas RPM, faz menos ruído e alcança uma vida útil muito mais longa para a ventoinha e para o PSU em geral.", "KYBER é protegida por 8 mecanismos de nível industrial e apoiado por uma garantia de 5 anos para garantir a segurança e estabilidade da unidade e do sistema."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":439.99, 
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/471343/fonte-xpg-kyber-850w-80-plus-gold-com-cabo-preto-kyber850g-bkcbr"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco":699.99, 
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+
+                    "link": "https://www.pichau.com.br/fonte-xpg-kyber-850w-80-plus-gold-preto-kyber850g-bkcbr"
+                }]            
+        },
+        "produto4":
+        {"id":4,
+            "nome": "SSD 1 TB Kingston NV2",
+            "tipo": "ssd",
+            "categoria": "hardware",
+            "imagem":"https://images5.kabum.com.br/produtos/fotos/380745/ssd-kingston-nv2-1-tb-m-2-2280-pcie-nvme-leitura-2-100-mb-s-e-gravacao-1-700-mb-s-snv2s-1000g_1666033119_g.jpg",
+            "descricao":["O NV2 PCIe 4.0 NVMe SSD da Kingston é uma solução substancial de armazenamento de última geração alimentada por um controlador Gen 4x4 NVMe. O NV2 oferece velocidades de leitura/gravação de até 3.500/2.100 MB/s com menores requisitos de energia e menor aquecimento para ajudar a otimizar o desempenho do seu sistema e agregar valor sem sacrifícios.","O design compacto de face única M.2 2280 (22x80mm) expande o armazenamento em até 2TB** enquanto economiza espaço para outros componentes, tornando o NV2 ideal para notebooks mais finos, sistemas de formato pequeno (SFF) e placas-mãe DIY.","Instalar um SSD (Disco de estado sólido) M.2 é fácil e aumentará significativamente o desempenho do seu computador. Siga esses passos abaixo para acelerar seu dispositivo e aumentar o espaço livre de armazenamento.", "Disponível em capacidades de 1 TB para oferecer todo o espaço necessário para aplicativos, documentos, fotos, vídeos e muito mais.Integra-se facilmente em modelos com conectores M.2. Perfeito para laptops finos e PCs de formato pequeno."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":369.99, 
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/380745/ssd-1-tb-kingston-nv2-m-2-2280-pcie-nvme-leitura-3500-mb-s-e-gravacao-2100-mb-s-snv2s-1000g"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco":262.99, 
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+
+                    "link": "https://www.pichau.com.br/ssd-kingston-nv2-250gb-m-2-2280-pcie-nvme-leitura-3000mb-s-gravacao-1300mb-s-snv2s-250g"
+                }]            
+        },
+        "produto5":
+        {"id":5,
+            "nome": "Placa Mãe Asus TUF GAMING A520M-PLUS II",
+            "tipo": "placa mãe",
+            "categoria": "hardware",
+            "imagem":"https://images3.kabum.com.br/produtos/fotos/165133/placa-mae-asus-tuf-gaming-a520m-plus-ii-amd-am4-matx-ddr4-90mb17g0-m0eay0_1632513548_g.jpg",
+            "descricao":["A Placa Mãe Asus TUF GAMING A520M-PLUS II, foi projetada com os mais altos padrões de qualidade e tecnologia TUF LANGuard e Turbo LAN. Criada especialmente para jogos online, surpreende até os gamers mais exigentes.", "Compatível com processadores Ryzen 5000 Series/4000 G-Series e praticamente toda a linha 3000 Series de Desktop Processors, oferece tecnologia de resfriamento abrangente graças ao trio: dissipador de calor VRM, dissipador de calor PCH, Fan Xpert 2+. para melhor resfriamento e maior desempenho dos seus componentes do seu PC Gamer. ", "Seu LED RGB possui headers RGB integrados e headers Gen 2 endereçáveis  para tiras de LED RGB que são facilmente sincronizados com hardware compatível com Aura Sync.", "Graças ao moderno ecossistema TUF Gaming Alliance a A520M-PLUS II é fácil de instalar, podendo ser manejada até mesmo por quem não tem conhecimento prévio.", "Com fornecimento de energia atualizado e opções abrangentes de refrigeração para alimentar as CPUs mais recentes AMD Ryzen, a TUF Gaming A520M-PLUS II possui suporte para memória e armazenamento mais rápidos, oferecendo a base perfeita para sua próxima plataforma de batalha de alta contagem de núcleos.", "As camadas de cobre de 56g afastam o calor dos componentes críticos para mantê-los em temperatura de operação ideal e impulsionam as CPUs além das velocidades padrão.", "As placas-mãe TUF Gaming foram projetadas para serem fáceis de instalar da maneira que você deseja, mesmo para quem faz a instalação pela primeira vez. O ecossistema da TUF Gaming Alliance facilita a seleção de peças compatíveis, enquanto o software Armoury Crate oferece controle total das configurações do sistema por meio de um único painel. ", "A TUF Gaming Alliance é uma parceria entre a ASUS e marcas de componentes de PC confiáveis para garantir a compatibilidade com uma ampla gama de peças, como gabinetes para PC, fontes de alimentação, coolers de CPU, kits de memória e muito mais. ", "A TUF Gaming B550M-Plus oferece um pacote de jogos completo e de alto desempenho com uma longa lista de recursos para melhorar sua experiência, incluindo rede ultra-rápida para jogabilidade on-line mais suave, áudio cristalino com dicas posicionais para jogos FPS e iluminação RGB integrada que sincroniza aos acessórios acoplados para ajudá-lo a criar uma atmosfera gaming personalizada.", "O Turbo LAN é um software de otimização de rede para priorização personalizável de pacotes. Com a tecnologia de modelagem de tráfego cFosSpeed, permite configurar a prioridade do aplicativo por meio de uma interface intuitiva e reduzir o lag da rede."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":519.99, 
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/165133/placa-mae-asus-tuf-gaming-a520m-plus-ii-amd-am4-matx-ddr4"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco":679.99, 
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+                    "link": "https://www.pichau.com.br/placa-mae-asus-tuf-gaming-a520m-plus-ii-ddr4-socket-amd-am4-m-atx-chipset-amd-a520-tuf-gaming-a520m-plus-ii"
+                }]            
+        }
+    }
+
+

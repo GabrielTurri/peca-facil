@@ -1,5 +1,9 @@
-*{
+* {
   font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #D2D2D2;
 }
 
 a {
@@ -9,6 +13,15 @@ a {
 
 .botao-entrar {
   width: 160px;
+}
+
+.botao-pesquisar {
+  background-color: #0096C7;
+}
+
+.botao-pesquisar:hover {
+  background-color: #038cb9;
+  transition: all 0.2s;
 }
 
 .content-wraper {
@@ -24,4 +37,31 @@ a {
 
 .icon {
   width: 20px;
+}
+
+.product-card {
+  width: 266px;
+  overflow-wrap: break-word;
+
+}
+
+.dropdown-button {
+  background-color: transparent;
+  border: none;
+}
+.menu-item {
+  font-weight: 700;
+}
+
+.menu-item:hover {
+  background-color: #bbb;
+}
+
+.linha-vertical {
+  border-left: 1px solid #9E9E9E;
+  height: 2rem;
+}
+.search-input {
+  flex-grow: 1;
+  margin: 0 16rem;
 }
