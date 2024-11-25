@@ -3,8 +3,43 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
   // Redireciona para uma página dentro do mesmo site
   header("Location: index.php");
   exit;
+
+
   
 }
+
+$json = file_get_contents("produtos.json");
+
+  if ($json === false) {
+    die("Erro ao ler o json");
+  }
+
+  $produtos = json_decode($json, true);
+  if ($produtos === null){
+    die("Erro ao decodificar produtos");
+  }
+
+  $tipos_hardwares = [];
+  $tipos_perifericos = [];
+  $lista_lojas = [];
+  $lojas = [];
+
+
+
+  // Procurar o produto pela categoria
+  foreach ($produtos as $produto) { 
+    if($produto['categoria'] == "hardware"){
+      if(in_array($produto['tipo'], $tipos_hardwares)){
+      } else{
+        array_push($tipos_hardwares, $produto['tipo']);
+      }
+    } else if($produto['categoria'] == "periferico"){
+      if(in_array($produto['tipo'], $tipos_perifericos)){
+      } else{
+        array_push($tipos_perifericos, $produto['tipo']);
+      }
+    }
+  }
 ?>
 
 <!DOCTYPE html>
