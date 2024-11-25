@@ -128,16 +128,10 @@
 
       // Procurar o produto pelo nome
       foreach ($produtos as $produto) {
-        $soma_preco = 0;
-        $preco_medio = 0;
-        $qtde_lojas = 0;
         $menor_preco = 99999;
         $loja_menor_preco = "";
         
         foreach($produto['lojas'] as $loja){
-          $soma_preco += $loja['preco'];
-          $qtde_lojas +=1;
-
           if($loja['preco'] < $menor_preco){
             $menor_preco = $loja['preco'];
             $loja_menor_preco = $loja['loja'];
@@ -165,23 +159,16 @@
       
       // criar o card de cada produto
       foreach($produtos as $produto){
-        // Achar preço médio do produto nas lojas que possuem ele
-        $soma_preco = 0;
-        $preco_medio = 0;
-        $qtde_lojas = 0;
         $menor_preco = 99999;
         $loja_menor_preco = ""; 
         
         foreach($produto['lojas'] as $loja){
-          $soma_preco += $loja['preco'];
-          $qtde_lojas +=1;
-
           if($loja['preco'] < $menor_preco){
             $menor_preco = $loja['preco'];
             $loja_menor_preco = $loja['loja'];
           }
         }
-        $preco_medio = round($soma_preco/$qtde_lojas,2);
+
         echo "<a href='produto.php?id={$produto['id']}'>
         <div class='product-card bg-white h-100 d-flex flex-column rounded p-2'>
           <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>

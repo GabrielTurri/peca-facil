@@ -3,9 +3,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
   // Redireciona para uma página dentro do mesmo site
   header("Location: index.php");
   exit;
-
-
-  
 }
 
 $json = file_get_contents("produtos.json");
@@ -23,8 +20,6 @@ $json = file_get_contents("produtos.json");
   $tipos_perifericos = [];
   $lista_lojas = [];
   $lojas = [];
-
-
 
   // Procurar o produto pela categoria
   foreach ($produtos as $produto) { 
@@ -152,23 +147,16 @@ $json = file_get_contents("produtos.json");
 
       // Procurar o produto pelo nome
       foreach ($produtos as $produto) {
-        $soma_preco = 0;
-        $preco_medio = 0;
-        $qtde_lojas = 0;
         $menor_preco = 99999;
         $loja_menor_preco = "";
         
         foreach($produto['lojas'] as $loja){
-          $soma_preco += $loja['preco'];
-          $qtde_lojas +=1;
-
           if($loja['preco'] < $menor_preco){
             $menor_preco = $loja['preco'];
             $loja_menor_preco = $loja['loja'];
           }
         }
 
-        $preco_medio = round($soma_preco/$qtde_lojas,2);
         if(stripos($produto['nome'], $valorProcurado) !== false){
           echo "<a href='produto.php?id={$produto['id']}'>
             <div class='product-card bg-white d-flex flex-column rounded p-2'>

@@ -41,7 +41,6 @@ foreach ($produtos as $produto) {
 
     if ($produto['id'] == $id_produto) {
         $produto_selecionado = $produto;
-        // break;
     }
 }
 
@@ -49,9 +48,6 @@ foreach ($produtos as $produto) {
 if ($produto_selecionado === null) {
     die('Produto não encontrado.');
 }
-
-print_r($tipos_perifericos);
-print_r($tipos_hardwares);
 
 
 ?>
@@ -148,10 +144,6 @@ print_r($tipos_hardwares);
       echo "<div class='d-flex flex-column'>";
       echo "<span class='title'>{$produto_selecionado['nome']}</span>";
       
-      // Achar preço médio do produto nas lojas que possuem ele
-      $soma_preco = 0;
-      $preco_medio = 0;
-      $qtde_lojas = 0;
       $menor_preco = 99999;
       $loja_menor_preco = ""; 
       $link_loja = "";
@@ -164,7 +156,6 @@ print_r($tipos_hardwares);
 
         }
       }
-      // echo "<h4>R$".$menor_preco." em <a href='{$link_loja}' target='_blank'>{$loja_menor_preco}</a></h4>";
       echo "
         <span class='sm-text'>Melhor oferta:</span>
         <span class='preco'>R$".$menor_preco."</span>
