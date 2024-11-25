@@ -111,7 +111,7 @@
       </div>
     </div>
     <div class="linha-vertical"> </div>
-    <a class="menu-item" href="#">Ofertas</a>
+    <a class="menu-item" href="./index.php">Ofertas</a>
     <div class="linha-vertical"> </div>
     <a class="menu-item" href="#">Cupons</a>
     <div class="linha-vertical"> </div>
@@ -119,7 +119,9 @@
   </div>
 </div>
 <div class="content-wraper mt-4">
-  <a href="./index.php">Voltar ao início</a>
+  <a href="./index.php" class="botao-voltar">
+    Voltar ao início
+  </a>
   
   <?php
     echo "<h2>Categoria selecionada: ".ucfirst($categoria_produto)."</h2>";

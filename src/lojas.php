@@ -122,7 +122,7 @@
       </div>
     </div>
     <div class="linha-vertical"> </div>
-    <a class="menu-item" href="#">Ofertas</a>
+    <a class="menu-item" href="./index.php">Ofertas</a>
     <div class="linha-vertical"> </div>
     <a class="menu-item" href="#">Cupons</a>
     <div class="linha-vertical"> </div>

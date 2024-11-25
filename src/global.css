@@ -50,7 +50,7 @@ a {
 
 .content-wraper {
   /* min-width: 800px; */
-  width: 70%;
+  width: 70vw;
   margin: 0 auto;
 }
 .imagem {
@@ -99,4 +99,8 @@ a {
   flex-direction: column;
   gap: 8px;
   justify-content: space-between;
+}
+
+.botao-voltar {
+  color: #0096C7;
 }

@@ -183,7 +183,7 @@
         }
         $preco_medio = round($soma_preco/$qtde_lojas,2);
         echo "<a href='produto.php?id={$produto['id']}'>
-        <div class='product-card bg-white d-flex flex-column rounded p-2'>
+        <div class='product-card bg-white h-100 d-flex flex-column rounded p-2'>
           <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
           <span class='fw-bold'>{$produto['nome']}</span>
           <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>

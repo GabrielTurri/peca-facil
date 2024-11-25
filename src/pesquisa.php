@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
       </div>
     </div>
     <div class="linha-vertical"> </div>
-    <a class="menu-item" href="#">Ofertas</a>
+    <a class="menu-item" href="./index.php">Ofertas</a>
     <div class="linha-vertical"> </div>
     <a class="menu-item" href="#">Cupons</a>
     <div class="linha-vertical"> </div>
@@ -90,6 +90,9 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 </div>
 <div class="content-wraper">
 
+  <a href="./index.php" class="botao-voltar">
+    Voltar ao início
+  </a>
   <h2>Resultados da Pesquisa:</h2>
   <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center">
   <?php

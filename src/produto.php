@@ -118,6 +118,9 @@ if ($produto === null) {
 <div class="content-wraper">
   <div class="produto-container">
 
+  <a href="./index.php" class="botao-voltar">
+    Voltar ao início
+  </a>
   <div class="d-flex flex-row produto-info">
     <?php
       echo "<img class='imagem' src='{$produto['imagem']}' alt='imagem do produto'>";
