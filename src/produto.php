@@ -20,17 +20,38 @@ if ($produtos === null) {
 
 // Procurar o produto pelo ID
 $produto = null;
-foreach ($produtos as $a) {
-    if ($a['id'] == $id_produto) {
-        $produto = $a;
-        break;
+$tipos_hardwares = [];
+$tipos_perifericos = [];
+$lista_lojas = [];
+$lojas = [];
+
+
+foreach ($produtos as $produto) {
+  if($produto['categoria'] == "hardware"){
+    if(in_array($produto['tipo'], $tipos_hardwares)){
+    } else{
+      array_push($tipos_hardwares, $produto['tipo']);
+    }
+  } else if($produto['categoria'] == "periferico"){
+    if(in_array($produto['tipo'], $tipos_perifericos)){
+    } else{
+      array_push($tipos_perifericos, $produto['tipo']);
+    }
+  }
+
+    if ($produto['id'] == $id_produto) {
+        $produto_selecionado = $produto;
+        // break;
     }
 }
 
-// Se o produto não for encontrado, exibir uma mensagem de erro
-if ($produto === null) {
+// Se o produto_selecionado não for encontrado, exibir uma mensagem de erro
+if ($produto_selecionado === null) {
     die('Produto não encontrado.');
 }
+
+print_r($tipos_perifericos);
+print_r($tipos_hardwares);
 
 
 ?>
@@ -123,9 +144,9 @@ if ($produto === null) {
   </a>
   <div class="d-flex flex-row produto-info">
     <?php
-      echo "<img class='imagem' src='{$produto['imagem']}' alt='imagem do produto'>";
+      echo "<img class='imagem' src='{$produto_selecionado['imagem']}' alt='imagem do produto'>";
       echo "<div class='d-flex flex-column'>";
-      echo "<span class='title'>{$produto['nome']}</span>";
+      echo "<span class='title'>{$produto_selecionado['nome']}</span>";
       
       // Achar preço médio do produto nas lojas que possuem ele
       $soma_preco = 0;
@@ -135,7 +156,7 @@ if ($produto === null) {
       $loja_menor_preco = ""; 
       $link_loja = "";
 
-      foreach($produto['lojas'] as $loja){
+      foreach($produto_selecionado['lojas'] as $loja){
         if($loja['preco'] < $menor_preco){
           $menor_preco = $loja['preco'];
           $loja_menor_preco = $loja['loja'];
@@ -151,7 +172,7 @@ if ($produto === null) {
       ";
       echo "</div></div>";
       echo "<h3>Descrição do produto:</h3>";
-      foreach($produto['descricao'] as $descricao){
+      foreach($produto_selecionado['descricao'] as $descricao){
           echo "<p>{$descricao}</p>";
       }
     ?>
@@ -159,14 +180,14 @@ if ($produto === null) {
   <div class="lista-lojas d-flex flex-column">  
     <?php
       echo "<h2>Ofertas nas lojas</h2>";
-      foreach($produto['lojas'] as $loja){
+      foreach($produto_selecionado['lojas'] as $loja){
         echo "
         <div class='d-flex flex-row oferta'>
           <div class='d-flex flex-row'>
             <img class='logo-loja' src='{$loja['icone']}' alt='logo da loja'>
             <div class='d-flex flex-column'>
               <span class='title'>{$loja['loja']}</span>
-              <span class='preco'>{$loja['preco']}</span>
+              <span class='preco'>R$"."{$loja['preco']}</span>
             </div>
           </div>
           <a href='{$loja['link']}' target='_blank'>
@@ -182,5 +203,8 @@ if ($produto === null) {
   
 
   <footer></footer>  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

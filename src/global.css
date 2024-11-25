@@ -14,7 +14,7 @@ a {
 .header {
   justify-content: space-between;
   align-items: center;
-  padding-top: 8px;
+  padding-top: 16px;
 }
 .navbar {
   justify-content: space-around;
