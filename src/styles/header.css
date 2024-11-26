@@ -1,0 +1,56 @@
+.header {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+}
+.navbar {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.input-pesquisar {
+    border: 1px solid #bbb;
+    border-radius: 8px 0 0 8px;
+    padding: 8px;
+}
+
+.botao-pesquisar {
+    background-color: #0096C7;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 8px 12px;
+}
+
+.botao-pesquisar:hover {
+    background-color: #038cb9;
+    transition: all 0.2s;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    border: none;
+}
+.menu-item {
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.menu-item:hover {
+    background-color: #bbb;
+}
+
+.linha-vertical {
+    border-left: 1px solid #9E9E9E;
+    height: 2rem;
+}
+
+.search-input {
+    max-width: 16rem;
+    flex-grow: 1;
+    margin: 0 2rem;
+}
