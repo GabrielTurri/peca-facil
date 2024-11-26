@@ -32,7 +32,7 @@
     </div>
 
     <button class="botao-entrar" type="submit">
-        <a href="">
+        <a href="./index.php">
         Entrar
       </a>
       </button>
@@ -45,6 +45,10 @@
 
 </div>
 
-  
+<?php include_once('./components/footer.html'); ?> 
+
 </body>
+
+
+
 </html>

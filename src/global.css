@@ -104,3 +104,13 @@ a {
 .botao-voltar {
   color: #0096C7;
 }
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 16px;
+  background-color: black;
+  color: white;
+}
