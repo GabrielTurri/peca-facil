@@ -37,19 +37,27 @@ foreach ($produtos as $produto) {
       <form class="d-flex flex-row search-input" action="pesquisa.php" method="POST">
         <input type="text" name="busca" class="input-pesquisar" autofocus placeholder="Digite o que procura...">
         
-        <button class="botao-pesquisar">
-          <img src="./assets/icons/magnifying-glass-solid.svg" class="icon" alt="">
+        <button class="botao-pesquisar icon">
+          <img src="./assets/icons/magnifying-glass-solid.svg" alt="">
         </button>
       </form>
 
-    <div class="d-flex flex-row gap-3">
-      <img src="./assets/icons/heart-regular.svg" class="icon" alt="">
-      <img src="./assets/icons/bell-regular.svg" class="icon" alt="">
+    <div class="d-flex flex-row gap-2 icones">
+      <a href="./pages/favoritos.php" class="icon">
+        <img src="./assets/icons/heart-regular.svg"  alt="">
+      </a>
+      <a href="./pages/alertas.php" class="icon">
+        <img src="./assets/icons/bell-regular.svg" alt="">
+
+      </a>
 
       <a href="login.php">
-          <div class="botao-entrar d-flex flex-row">
-            <img src="./assets/icons/user-regular.svg" class="icon" alt="">
-            <span>Entrar ou fazer cadastro</span>
+          <div class="botao-entrar d-flex flex-row icon">
+            <img src="./assets/icons/user-regular.svg" alt="">
+            <div class="d-flex flex-column">
+              <span>Entrar ou</span>
+              <span>fazer cadastro</span>
+            </div>
           </div>
       </a>     
     </div>

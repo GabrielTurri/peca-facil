@@ -12,11 +12,6 @@ a {
   color: black;
 }
 
-.botao-entrar {
-  width: 160px;
-  gap: 8px;
-}
-
 
 .content-wraper {
   /* min-width: 800px; */
@@ -30,9 +25,6 @@ a {
   height: 250px;
 }
 
-.icon {
-  width: 20px;
-}
 
 .product-card {
   width: 266px;

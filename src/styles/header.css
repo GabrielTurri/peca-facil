@@ -54,3 +54,42 @@
     flex-grow: 1;
     margin: 0 2rem;
 }
+
+.botao-entrar {
+  width: 160px;
+  gap: 8px;
+  border-radius: 8px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-entrar:hover {
+    background-color: #bbb;
+
+}
+
+.icones {
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.icon img {
+    width: 20px;
+}
+
+.icones .icon img {
+    width: 36px;
+}
+
+.icones img {
+    border-radius: 8px;
+    padding: 8px;
+
+}
+
+
+.icones img:hover {
+    background-color: #bbb;
+}
