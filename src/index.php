@@ -101,22 +101,30 @@
         foreach($produtos as $produto){
           $menor_preco = 99999;
           $loja_menor_preco = ""; 
+          $quantidade_total = 0;
           
           foreach($produto['lojas'] as $loja){
             if($loja['preco'] < $menor_preco){
               $menor_preco = $loja['preco'];
               $loja_menor_preco = $loja['loja'];
             }
-          }
 
-          echo "<a href='produto.php?id={$produto['id']}'>
-          <div class='product-card bg-white h-100 d-flex flex-column rounded p-2'>
+            if($loja['quantidade'] > 0){
+              $quantidade_total += $loja['quantidade'];
+            }
+          }
+          if($quantidade_total > 0){
+
+            
+            echo "<a href='produto.php?id={$produto['id']}'>
+            <div class='product-card bg-white h-100 d-flex flex-column rounded p-2'>
             <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
             <span class='fw-bold'>{$produto['nome']}</span>
             <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
             <span>Menor Preço - R$".$menor_preco."</span>
-          </div>
-        </a>";
+            </div>
+            </a>";
+          }
         }
       }
 

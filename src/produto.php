@@ -110,20 +110,27 @@ if ($produto_selecionado === null) {
     <?php
       echo "<h2>Ofertas nas lojas</h2>";
       foreach($produto_selecionado['lojas'] as $loja){
-        echo "
-        <div class='d-flex flex-row oferta'>
-          <div class='d-flex flex-row'>
-            <img class='logo-loja' src='{$loja['icone']}' alt='logo da loja'>
-            <div class='d-flex flex-column'>
-              <span class='title'>{$loja['loja']}</span>
-              <span class='preco'>R$"."{$loja['preco']}</span>
-            </div>
+        if($loja['quantidade'] > 0){
+
+          echo "
+          <div class='d-flex flex-row oferta'>
+            <div class='d-flex flex-row gap-2'>
+              <img class='logo-loja' src='{$loja['icone']}' alt='logo da loja'>
+              <div class='d-flex flex-column'>
+                <span class='title'>{$loja['loja']}</span>
+                <span class='preco'>R$"."{$loja['preco']}</span>";
+          if($loja['quantidade'] == 1){
+            echo "<span class='ultima-unid'>Última unidade!</span>";
+          }
+          echo"              
+                </div>
+              </div>
+              <a href='{$loja['link']}' target='_blank'>
+              <button class='botao-produto'>Ir à loja</button>
+            </a>
           </div>
-          <a href='{$loja['link']}' target='_blank'>
-            <button class='botao-produto'>Ir à loja</button>
-          </a>
-            </div>
-        ";
+          ";
+          }
       }     
     ?>
     </div>

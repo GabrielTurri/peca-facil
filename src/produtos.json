@@ -11,18 +11,21 @@
                 {
                     "loja":"Kabum", 
                     "preco":275.99, 
+                    "quantidade": 3,
                     "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
                     "link": "https://www.kabum.com.br/produto/97092/mouse-gamer-sem-fio-logitech-g305-lightspeed-com-6-botoes-programaveis-e-ate-12-000-dpi-preto-910-005281?utm_id=21416437422&gad_source=1&gclid=CjwKCAiAudG5BhAREiwAWMlSjB4SOdO1I-Sv03-c9FI0NtIaWt0JO03KdVyN5nMUPv8ZHRKEdgGe0xoCmO0QAvD_BwE"
                 },
                 {
                     "loja":"Pichau", 
                     "preco":287.99, 
+                    "quantidade": 7,
                     "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
                     "link": "https://www.pichau.com.br/mouse-gamer-logitech-g305-wireless-12000-dpi-6-botoes-preto-910-005281"
                 },
                 {
                     "loja":"Fastshop", 
                     "preco":259.99, 
+                    "quantidade": 1,
                     "icone": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwGzyuxhRtk6tB2IdqMqMjl1bszBv8DBr_w&s",
                     "link": "https://site.fastshop.com.br/mouse-optico-sem-fio-para-jogos-lightspeed-preto---logitech-g---g305-log305lighpto_prd/p?utm_source=google&utm_medium=cpc&utm_term=pmax_1p&utm_campaign=17335193922&gad_source=1&gclid=CjwKCAiAudG5BhAREiwAWMlSjDM3FspLKz7_LLn1Kx-PGti1XhLNSXsZV9XZ3Blq3JDPFP1t7yjmVRoCuAYQAvD_BwE"
                 }]            
@@ -38,12 +41,14 @@
                 {
                     "loja":"Kabum", 
                     "preco":1899.99, 
+                    "quantidade": 10,
                     "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
                     "link": "https://www.kabum.com.br/produto/520724/placa-de-video-rtx4060-1-click-oc-2x-teclab-lite-galax-nvidia-geforce-8gb-gddr6-g-sync-dlss-ray-tracing?utm_id=21416437563&gad_source=1&gclid=CjwKCAiAudG5BhAREiwAWMlSjMAejPHaFmIfVJgh83tDGcIGybWOqXK6i9rpPSpVNHhfeXED0I__SxoC_dsQAvD_BwE"
                 },
                 {
                     "loja":"Pichau", 
                     "preco":2699.99, 
+                    "quantidade": 1,
                     "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
 
                     "link": "https://www.pichau.com.br/placa-de-video-asus-geforce-rtx-4060-ti-oc-dual-edition-8gb-gddr6-128-bit-dual-rtx4060ti-o8g-evo"
@@ -61,12 +66,14 @@
                 {
                     "loja":"Kabum", 
                     "preco":439.99, 
+                    "quantidade": 2,
                     "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
                     "link": "https://www.kabum.com.br/produto/471343/fonte-xpg-kyber-850w-80-plus-gold-com-cabo-preto-kyber850g-bkcbr"
                 },
                 {
                     "loja":"Pichau", 
                     "preco":699.99, 
+                    "quantidade": 6,
                     "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
 
                     "link": "https://www.pichau.com.br/fonte-xpg-kyber-850w-80-plus-gold-preto-kyber850g-bkcbr"
@@ -83,12 +90,14 @@
                 {
                     "loja":"Kabum", 
                     "preco":369.99, 
+                    "quantidade": 2,
                     "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
                     "link": "https://www.kabum.com.br/produto/380745/ssd-1-tb-kingston-nv2-m-2-2280-pcie-nvme-leitura-3500-mb-s-e-gravacao-2100-mb-s-snv2s-1000g"
                 },
                 {
                     "loja":"Pichau", 
                     "preco":262.99, 
+                    "quantidade": 1,
                     "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
 
                     "link": "https://www.pichau.com.br/ssd-kingston-nv2-250gb-m-2-2280-pcie-nvme-leitura-3000mb-s-gravacao-1300mb-s-snv2s-250g"
@@ -105,12 +114,14 @@
                 {
                     "loja":"Kabum", 
                     "preco":519.99, 
+                    "quantidade": 2,
                     "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
                     "link": "https://www.kabum.com.br/produto/165133/placa-mae-asus-tuf-gaming-a520m-plus-ii-amd-am4-matx-ddr4"
                 },
                 {
                     "loja":"Pichau", 
                     "preco":679.99, 
+                    "quantidade": 32,
                     "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
                     "link": "https://www.pichau.com.br/placa-mae-asus-tuf-gaming-a520m-plus-ii-ddr4-socket-amd-am4-m-atx-chipset-amd-a520-tuf-gaming-a520m-plus-ii"
                 }]            
