@@ -3,14 +3,14 @@
        "produto1":
        {"id":1,
             "nome": "Mouse Gamer Sem Fio Logitech G305 LIGHTSPEED",
-            "tipo": "mouse",
+            "subcategoria": "mouse",
             "categoria": "periferico",
             "imagem":"https://images2.kabum.com.br/produtos/fotos/97092/97092_1_1528977678_g.jpg",
             "descricao":["O G305 apresenta o sensor HERO de última geração com sensibilidade de 200 a 12.000 DPI para precisão de nível de competição. A tecnologia sem fio LIGHTSPEED oferece desempenho super rápido de 1ms. Com incrível eficiência de energia, o G305 permanece ligado e p  ronto para jogar por até 250 horas com uma única pilha AA inclusa. Jogue em qualquer lugar com este mouse para jogos ultra-portátil e leve que pesa apenas 99 gramas, é fácil de transportar com você e tem armazenamento integrado para o receptor sem fio USB incluso. Use o Software Logitech G HUB para programar rapidamente os 6 botões com comandos instantâneos, configurações de DPI e muito mais. O G305 é o mouse sem fio LIGHTSPEED para todos."],
             "lojas":[
                 {
                     "loja":"Kabum", 
-                    "preco":275.99, 
+                    "preco":229.99, 
                     "quantidade": 3,
                     "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
                     "link": "https://www.kabum.com.br/produto/97092/mouse-gamer-sem-fio-logitech-g305-lightspeed-com-6-botoes-programaveis-e-ate-12-000-dpi-preto-910-005281?utm_id=21416437422&gad_source=1&gclid=CjwKCAiAudG5BhAREiwAWMlSjB4SOdO1I-Sv03-c9FI0NtIaWt0JO03KdVyN5nMUPv8ZHRKEdgGe0xoCmO0QAvD_BwE"
@@ -33,7 +33,7 @@
         "produto2":
         {"id":2,
             "nome": "Placa de Vídeo RTX4060",
-            "tipo": "placa de vídeo",
+            "subcategoria": "placa de vídeo",
             "categoria": "hardware",
             "imagem":"https://images4.kabum.com.br/produtos/fotos/520724/placa-de-video-rtx4060-1-click-oc-2x-teclab-lite-galax-nvidia-geforce-_1708435296_g.jpg",
             "descricao":["Equipada com uma memória GDDR17 de 8 Gbps 128GB e 6 bits, a GeForce RTX 4060 1-Click OC 2X suporta até 2490MHz para o seu exclusivo OC de 1 clique, com um cooler de slot duplo leve e as ventoinhas duplas de 92 mm, tornando-se o 2º design mais compacto das placas gráficas GALAX GeForce RTX série 40. Com o design ultra-eficiente do refrigerador, proporciona desempenhos impressionantes à temperatura ideal, mantendo uma operação extremamente silenciosa.", "Suportado pelo aplicativo Xtreme Tuner para OC móvel de 1 clique, exibição de informações da GPU na tela e configurações avançadas de OC.","Equipadas com NVIDIA DLSS 3, arquitetura ultraeficiente Ada Lovelace e ray tracing completo de RTX, as placas gráficas GeForce RTX Série 40 são muito rápidas, proporcionando aos jogadores e criadores um salto quântico em desempenho, gráficos com tecnologia Al e muito mais. capacidades da plataforma. Este enorme avanço na tecnologia GPU é a porta de entrada para as experiências de jogo mais envolventes, recursos Al incríveis e fluxos de trabalho de criação de conteúdo mais rápidos. Essas GPUs levam gráficos de última geração para o futuro."],
@@ -58,7 +58,7 @@
         "produto3":
         {"id":3,
             "nome": "Fonte XPG Kyber",
-            "tipo": "fonte",
+            "subcategoria": "fonte",
             "categoria": "hardware",
             "imagem":"https://images3.kabum.com.br/produtos/fotos/471343/fonte-xpg-kyber-850w-80-plus-gold-bivolt-preto-kyber850g-bkcbr_1698434934_g.jpg",
             "descricao":["As unidades de fonte de alimentação KYBER aderem às especificações do guia de design Intel ATX 3.0 e oferecem um conector 12VHPWR na categoria de 750 e 850 watts. A KYBER pode suportar as placas gráficas mais recentes, e é feita especificamente para aqueles que exigem alta capacidade gráfica e desempenho.","A SÉRIE XPG KYBER é certificada pela Cybenetics por sua eficiência e nível de ruído, ficando no topo de sua categoria nos padrões ETA e LAMBDA.  Para obter mais informações, visite Cybenetics Labs – Certificações de eficiência e nível de ruído XPG PSU.","As unidades de fonte de alimentação da série KYBER são certificadas GOLD pela 80 PLUS, alcançando até 91,40% (115V) de eficiência com 50% de carga.", "A curva de ventoinha inteligente garante uma operação silenciosa na maioria dos cenários do usuário. Ao iniciar o controle da ventoinha em baixas RPM, faz menos ruído e alcança uma vida útil muito mais longa para a ventoinha e para o PSU em geral.", "KYBER é protegida por 8 mecanismos de nível industrial e apoiado por uma garantia de 5 anos para garantir a segurança e estabilidade da unidade e do sistema."],
@@ -82,7 +82,7 @@
         "produto4":
         {"id":4,
             "nome": "SSD 1 TB Kingston NV2",
-            "tipo": "ssd",
+            "subcategoria": "ssd",
             "categoria": "hardware",
             "imagem":"https://images5.kabum.com.br/produtos/fotos/380745/ssd-kingston-nv2-1-tb-m-2-2280-pcie-nvme-leitura-2-100-mb-s-e-gravacao-1-700-mb-s-snv2s-1000g_1666033119_g.jpg",
             "descricao":["O NV2 PCIe 4.0 NVMe SSD da Kingston é uma solução substancial de armazenamento de última geração alimentada por um controlador Gen 4x4 NVMe. O NV2 oferece velocidades de leitura/gravação de até 3.500/2.100 MB/s com menores requisitos de energia e menor aquecimento para ajudar a otimizar o desempenho do seu sistema e agregar valor sem sacrifícios.","O design compacto de face única M.2 2280 (22x80mm) expande o armazenamento em até 2TB** enquanto economiza espaço para outros componentes, tornando o NV2 ideal para notebooks mais finos, sistemas de formato pequeno (SFF) e placas-mãe DIY.","Instalar um SSD (Disco de estado sólido) M.2 é fácil e aumentará significativamente o desempenho do seu computador. Siga esses passos abaixo para acelerar seu dispositivo e aumentar o espaço livre de armazenamento.", "Disponível em capacidades de 1 TB para oferecer todo o espaço necessário para aplicativos, documentos, fotos, vídeos e muito mais.Integra-se facilmente em modelos com conectores M.2. Perfeito para laptops finos e PCs de formato pequeno."],
@@ -106,7 +106,7 @@
         "produto5":
         {"id":5,
             "nome": "Placa Mãe Asus TUF GAMING A520M-PLUS II",
-            "tipo": "placa mãe",
+            "subcategoria": "placa mãe",
             "categoria": "hardware",
             "imagem":"https://images3.kabum.com.br/produtos/fotos/165133/placa-mae-asus-tuf-gaming-a520m-plus-ii-amd-am4-matx-ddr4_1732545997_g.jpg",
             "descricao":["A Placa Mãe Asus TUF GAMING A520M-PLUS II, foi projetada com os mais altos padrões de qualidade e tecnologia TUF LANGuard e Turbo LAN. Criada especialmente para jogos online, surpreende até os gamers mais exigentes.", "Compatível com processadores Ryzen 5000 Series/4000 G-Series e praticamente toda a linha 3000 Series de Desktop Processors, oferece tecnologia de resfriamento abrangente graças ao trio: dissipador de calor VRM, dissipador de calor PCH, Fan Xpert 2+. para melhor resfriamento e maior desempenho dos seus componentes do seu PC Gamer. ", "Seu LED RGB possui headers RGB integrados e headers Gen 2 endereçáveis  para tiras de LED RGB que são facilmente sincronizados com hardware compatível com Aura Sync.", "Graças ao moderno ecossistema TUF Gaming Alliance a A520M-PLUS II é fácil de instalar, podendo ser manejada até mesmo por quem não tem conhecimento prévio.", "Com fornecimento de energia atualizado e opções abrangentes de refrigeração para alimentar as CPUs mais recentes AMD Ryzen, a TUF Gaming A520M-PLUS II possui suporte para memória e armazenamento mais rápidos, oferecendo a base perfeita para sua próxima plataforma de batalha de alta contagem de núcleos.", "As camadas de cobre de 56g afastam o calor dos componentes críticos para mantê-los em temperatura de operação ideal e impulsionam as CPUs além das velocidades padrão.", "As placas-mãe TUF Gaming foram projetadas para serem fáceis de instalar da maneira que você deseja, mesmo para quem faz a instalação pela primeira vez. O ecossistema da TUF Gaming Alliance facilita a seleção de peças compatíveis, enquanto o software Armoury Crate oferece controle total das configurações do sistema por meio de um único painel. ", "A TUF Gaming Alliance é uma parceria entre a ASUS e marcas de componentes de PC confiáveis para garantir a compatibilidade com uma ampla gama de peças, como gabinetes para PC, fontes de alimentação, coolers de CPU, kits de memória e muito mais. ", "A TUF Gaming B550M-Plus oferece um pacote de jogos completo e de alto desempenho com uma longa lista de recursos para melhorar sua experiência, incluindo rede ultra-rápida para jogabilidade on-line mais suave, áudio cristalino com dicas posicionais para jogos FPS e iluminação RGB integrada que sincroniza aos acessórios acoplados para ajudá-lo a criar uma atmosfera gaming personalizada.", "O Turbo LAN é um software de otimização de rede para priorização personalizável de pacotes. Com a tecnologia de modelagem de tráfego cFosSpeed, permite configurar a prioridade do aplicativo por meio de uma interface intuitiva e reduzir o lag da rede."],
@@ -125,7 +125,279 @@
                     "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
                     "link": "https://www.pichau.com.br/placa-mae-asus-tuf-gaming-a520m-plus-ii-ddr4-socket-amd-am4-m-atx-chipset-amd-a520-tuf-gaming-a520m-plus-ii"
                 }]            
+        },
+        "produto6":
+        {"id":6,
+            "nome": "Teclado Mecânico Gamer Sem Fio Logitech G915",
+            "subcategoria": "teclado",
+            "categoria": "periferico",
+            "imagem":"https://images0.kabum.com.br/produtos/fotos/652580/teclado-mecanico-gamer-sem-fio-logitech-g915-x-lightspeed-rgb-lightsync-usb-ou-bluetooth-switch-gl-brown-tactile-preto-920-012670_1731261713_g.jpg",
+            "descricao":["O teclado gamer Logitech G915 X LIGHTSPEED oferece as mais recentes inovações em tecnologia para jogos com um design elaborado e materiais selecionados. A tecnologia sem fio Lightspeed.", "A conectividade de modo triplo permite a conexão do teclado por meio do modo de dados com fio, ou Bluetooth e Lightspeed de 2,4 GHz sem fio. Com o Keycontrol, o controle está nas suas mãos.", "Para transformar o teclado em um centro de comando personalizado. As teclas de mídia de toque suave, nove teclas G e uma barra de rolagem de volume em ferro fundido garantem controle de acesso rápido. Os switches mecânicos GL oferecem um design fino sem comprometer o desempenho,e garantem mais ações por minuto. O teclado mecânico gamer sem fio Logitech G915 também conta.", "E materiais premium para garantir uma experiência de digitação mais avançada. Desfrute de jogos com a bateria de até 36 horas de duração contínua e recarregamento em apenas quatro horas. Carregue via USB-C e continue jogando.", "Oferece acesso a aproximadamente 16,8 milhões de cores para personalização ilimitada do seu teclado gamer. Reúna todos os equipamentos Logitech G por meio do G HUB."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":1499.99, 
+                    "quantidade": 1,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/652580/teclado-mecanico-gamer-sem-fio-logitech-g915-x-lightspeed-rgb-lightsync-usb-ou-bluetooth-switch-gl-brown-tactile-preto-920-012670"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco":1399.99, 
+                    "quantidade": 3,
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+                    "link": "https://www.pichau.com.br/teclado-mecanico-g915-tactile-rgb-switch-brown-low-profile-wireless-920-008902?srsltid=AfmBOoom1NFRdqf5UvMmZx_avtN42H4D5yHJPO63aTQKykkCEEmvTRxW"
+                },
+                {
+                    "loja":"Syma Solutions", 
+                    "preco":1139.05, 
+                    "quantidade": 4,
+                    "icone":"https://www.syma.com.br/skin/frontend/syma/2018/images/logo.png",
+                    "link": "https://www.syma.com.br/teclado-gamer-logitech-mecanico-g915-lightspeed-920-008902.html?srsltid=AfmBOooN9DTHLmcuvTJ95FUXMtl_tBMOUCHMqpF16SNljRH-bz7oUT2P"
+                }
+            ]            
+        },
+        "produto7":
+        {"id":7,
+            "nome": "Teclado Mecânico Gamer Redragon Kumara Pro",
+            "subcategoria": "teclado",
+            "categoria": "periferico",
+            "imagem":"https://images9.kabum.com.br/produtos/fotos/sync_mirakl/444909/Teclado-Mec-nico-Gamer-Redragon-Kumara-Pro-RGB-Preto-Wireless-Switch-Brown-K552rGB-brs-b_1729803253_g.jpg",
+            "descricao":["O Teclado Mecânico Gamer Redragon Kumara Pro é a escolha perfeita para quem busca alta performance em jogos. Com switches Redragon Mk.II DIY Brown, iluminação RGB individual por tecla, layout ABNT2 e conectividade USB 2.0, wireless e bluetooth, este teclado oferece uma experiência única e personalizada.", "Além disso, possui keycaps feitas com o método double shot injection, resultando em legendas duradouras, e funcionalidade para bloqueio da tecla Windows. Com altura ajustável e rollover N-Key, este teclado é ideal para gamers que buscam conforto e precisão. Conteúdo da embalagem: Teclado Gamer Redragon Kumara Pro."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":386.79, 
+                    "quantidade": 6,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/444909/teclado-mecanico-gamer-redragon-kumara-pro-rgb-preto-wireless-switch-brown-k552rgb-brs-b"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco":229.99, 
+                    "quantidade": 1,
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+                    "link": "https://www.pichau.com.br/teclado-magnetico-gamer-redragon-kumara-pro-rgb-switch-azul-preto-k552rgb-pro-pt-blue?srsltid=AfmBOoo4aXaR8y49AgDtuKF18EnyWAIoNZNhgEo20UxpxGINFD93log1"
+                }
+            ]            
+        },
+        "produto8":
+        {"id":8,
+            "nome": "Cadeira Elements Astra Pro V2",
+            "subcategoria": "cadeira",
+            "categoria": "periferico",
+            "imagem":"https://images7.kabum.com.br/produtos/fotos/sync_mirakl/663047/Cadeira-Elements-Ergon-mica-Escrit-rio-Astra-Pro-V2-Cinza_1731756823_g.jpg",
+            "descricao":["Sua Jornada de Trabalho Redefinida", "Quando você se senta na Astra Pro, sente a diferença. Não é apenas a estética ou os materiais cuidadosamente selecionados, é a experiência completa de conforto e suporte que redefine o seu dia a dia de trabalho.", "Disponível em três combinações sofisticadas, preto, cinza e branco com cinza, permitindo que ela se ajuste perfeitamente ao seu estilo.", "Recoberta em tecido Mesh resistente, leve e respirável só no encosto e suporte cervical.", "Feita com materiais de excelente qualidade e alta resistência, garantindo que seja um produto duradouro.", "A cadeira ergonômica Astra Pro possui certificação BIFMA e atende aos requisitos da NR-17. Essas certificações asseguram que a cadeira foi projetada para proporcionar suporte adequado, prevenindo desconfortos e lesões relacionadas à postura inadequada."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":1060.20, 
+                    "quantidade": 5,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/663047/cadeira-elements-ergonomica-escritorio-astra-pro-v2-cinza"
+                },
+                {
+                    "loja":"Magazine Luiza", 
+                    "preco":942.40, 
+                    "quantidade": 1,
+                    "icone":"https://seeklogo.com/images/M/magalu-logo-4C8BBA7DE9-seeklogo.com.png",
+                    "link": "https://www.magazineluiza.com.br/cadeira-elements-ergonomica-escritorio-astra-pro-v2-cinza/p/hjb4e290b3/mo/moec/"
+                }
+            ]            
+        },
+        "produto9":
+        {"id":9,
+            "nome": "Cadeira DT3 Maya",
+            "subcategoria": "cadeira",
+            "categoria": "periferico",
+            "imagem":"https://images1.kabum.com.br/produtos/fotos/470021/cadeira-office-dt3-maya-all-ate-120kg-estrutura-de-nylon-preto-13513-3_1728048085_g.jpg",
+            "descricao":["Uma excelente opção para quem busca conforto e ergonomia para o seu dia a dia. Com um design moderno e elegante, ela é perfeita para o escritório ou o home office.", "Um material resistente e durável. O encosto é feito em mesh, um material que permite a circulação do ar, mantendo o usuário fresco e confortável. O assento é feito em tecido, que é macio e confortável.", "Ajuda a manter a coluna ereta e a prevenir dores nas costas. Os apoios de braço são reguláveis, permitindo que o usuário encontre a posição ideal para os braços.", "Permite ajustar a altura do assento e o reclino do encosto. Isso permite que o usuário encontre a posição ideal para trabalhar ou relaxar."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":859.90, 
+                    "quantidade": 1,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/470021/cadeira-office-dt3-maya-all-ate-120kg-estrutura-de-nylon-preto-13513-3"
+                },
+                {
+                    "loja":"DT3", 
+                    "preco":899.90, 
+                    "quantidade": 9,
+                    "icone":"https://acdn.mitiendanube.com/stores/002/007/282/themes/common/logo-1349211611-1692306341-a1c6cf6f3925cedf446f2fae372c01c81692306341-320-0.webp",
+                    "link": "https://dt3.com/produtos/cadeira-office-dt3-maya/?srsltid=AfmBOoqnm30WSkEhcmf-8n82Bs2t0LKfvUtVHI9tgXhd2kCb3XrhJ-tH"
+                }
+            ]            
+        },
+        "produto10":
+        {"id":10,
+            "nome": "Monitor Gamer Curvo LG UltraGear LG 34''",
+            "subcategoria": "monitor",
+            "categoria": "periferico",
+            "imagem":"https://images8.kabum.com.br/produtos/fotos/472908/monitor-gamer-lg-ultragear-lg-34-curvo-led-wqhd-ultrawide-160hz-1ms-displayport-e-hdmi-amd-freesync-premium-hdr10-99-srgb-34gp63a-b_1717591886_g.jpg",
+            "descricao":["Se você está em busca de uma experiência imersiva para diversos tipos de jogos, como estratégia, FPS e corrida, este monitor é perfeito para você. Com a resolução QHD UltraWide (3440x1440), você ganha 30% a mais de área de tela, garantindo que nenhum detalhe do jogo passe despercebido. Além disso, o modelo conta com som estéreo 7W com MaxxAudio, oferecendo uma qualidade de som envolvente. A proporção de tela 21:9 também aumenta sua produtividade, permitindo que você acesse dois conteúdos simultaneamente na mesma tela, ideal para jogar e transmitir ou trabalhar ao mesmo tempo.", "Com uma taxa de atualização de 160Hz, o monitor garante uma jogabilidade suave e fluida, especialmente durante a transição de quadros nos jogos. O tempo de resposta de 1ms (MBR) torna o monitor extremamente responsivo, proporcionando uma experiência de jogo mais ágil e precisa.", "Gamer para te dar ainda mais vantagem enquanto joga como o AMD FreeSync Premium, Black Stabilizer, Crosshair, Dynamic Action Sync e Motion Blur Reduction."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":1927.99, 
+                    "quantidade": 3,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/472908/monitor-gamer-curvo-lg-ultragear-lg-34-ultrawide-160hz-wqhd-1ms-displayport-e-hdmi-amd-freesync-premium-hdr10-99-srgb-34gp63a-b"
+                },
+                {
+                    "loja":"LG", 
+                    "preco":2109.0, 
+                    "quantidade": 9,
+                    "icone":"https://www.lg.com/content/dam/lge/common/logo/logo-lg-100-44.svg",
+                    "link": "https://www.lg.com/br/monitores/monitores-ultragear/34gp63a-b/?srsltid=AfmBOopHMKe_3AvizIANv93z9lS74vvZvDv4IFBe4BSmtB9Krct-reRC"
+                }
+            ]            
+        },
+        "produto11":
+        {"id":11,
+            "nome": "Monitor Gamer Curvo Samsung Odyssey 49'' OLED",
+            "subcategoria": "monitor",
+            "categoria": "periferico",
+            "imagem":"https://images9.kabum.com.br/produtos/fotos/613319/monitor-gamer-curvo-samsung-odyssey-49-oled-super-ultrawide-240hz-0-03ms-displayport-hdmi-freesync-premium-prata-ls49cg930slmzd_1722524398_g.jpg",
+            "descricao":["Desfrute de gráficos deslumbrantes em seus jogos com o Odyssey OLED G9. A exclusiva Tecnologia de Pontos Quânticos proporciona imagens com contraste puro, além de cores mais brilhantes e vibrantes.", "A tela Super Ultra-Wide, equivalente a dois monitores QHD lado a lado, permite que você capte todos os detalhes do seu jogo com máxima nitidez. A curvatura de 1800R da tela coloca você no centro da ação, proporcionando uma imersão incomparável.", "Com mais pixels por polegada, o Odyssey OLED G9 de 49'' oferece o nível de nitidez necessário para capturar até os menores e mais significativos detalhes na tela.", "O OLED G9 gera um preto puro na tela, eliminando a fuga de luz dos pixels, para que você enxergue todos os detalhes do seu jogo, mesmo nas cenas mais escuras.", "Desvie, ataque e contra-ataque mais rápido! A tecnologia OLED oferece um tempo de resposta de 0,03ms (GtG) para reações quase instantâneas. As conexões HDMI 2.1 e DisplayPort proporcionam uma performance superior com uma taxa de atualização de 240Hz."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":7899.00, 
+                    "quantidade": 1,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/613319/monitor-gamer-curvo-samsung-odyssey-49-oled-super-ultrawide-240hz-0-03ms-displayport-hdmi-freesync-premium-prata-ls49cg930slmzd"
+                },
+                {
+                    "loja":"Fastshop", 
+                    "preco":10699.0, 
+                    "quantidade": 1,
+                    "icone":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwGzyuxhRtk6tB2IdqMqMjl1bszBv8DBr_w&s",
+                    "link": "https://site.fastshop.com.br/monitor-gamer-odyssey-oled-g9-49--samsung-curvo-oled--com-1-000-000-1-contraste--dqhd--240hz---ls49cg930slmzd-sgls49g930pta_prd/p"
+                }
+            ]            
+        },
+        "produto12":
+       {"id":12,
+            "nome": "Mouse Gamer Sem Fio Redragon Storm Pro",
+            "subcategoria": "mouse",
+            "categoria": "periferico",
+            "imagem":"https://images8.kabum.com.br/produtos/fotos/523248/mouse-gamer-sem-fio-redragon-storm-pro-rgb-16000-dpi-8-botoes-wireless-preto-m808-ks_1717675137_g.jpg",
+            "descricao":["Possui um design furado em padrão 'honeycomb' que proporciona uma aparência moderna e diferenciada. Esse estilo oferece benefícios funcionais como redução de peso e melhor ventilação, além de destacar a iluminação RGB personalizável, combinando funcionalidade e estética atraente.", "O Redragon RGB Chroma Mark ll vai te oferecer uma gama aprimorada de cores e uma maior personalização, sendo uma excelente opção para você criar um setup e chamar de seu! Você pode ajustar a iluminação do jeito que preferir, criando um ambiente incrivel para seu espaço gamer. Com o RGB Chroma Mark II, sua experiência vai trazer mais imersão e estilo!", "O Redragon Storm Pro é um mouse versátil que se adapta às preferências de pegada de diferentes jogadores, proporcionando conforto, controle e precisão, independentemente do estilo de jogo escolhido. Sua capacidade de atender às necessidades da Palm, Claw e Fingertip o torna uma escolha popular entre gamers de todos os tipos."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":169.99, 
+                    "quantidade": 1,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/523248/mouse-gamer-sem-fio-redragon-storm-pro-rgb-16000-dpi-8-botoes-wireless-preto-m808-ks"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco":167.99, 
+                    "quantidade": 1,
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+                    "link": "https://www.pichau.com.br/mouse-gamer-redragon-storm-pro-rgb-wireless-16000dpi-8-botoes-preto-m808-ks?srsltid=AfmBOoqd-jWnDD7om1eZPmwroiXz6Nm1-ltdlnjlMqkdfEKSHWI81hhj"
+                },
+                {
+                    "loja":"Terabyte", 
+                    "preco":149.99, 
+                    "quantidade": 1,
+                    "icone": "https://www.overloadgames.com.br/img/parceiros/terabyte-shop/terabyte-shop.png",
+                    "link": "https://www.terabyteshop.com.br/produto/24076/mouse-gamer-redragon-storm-pro-16000-dpi-wireless-8-botoes-programaveis-rgb-black-m808-ks?srsltid=AfmBOoqflUAj7i72tI9tG-OMI1l3oJ-lylsQWo2pD1rTSzzYUm5J9gFL"
+                }]            
+        },
+        "produto13":
+       {"id":13,
+            "nome": "Processador AMD Ryzen 7 5800X",
+            "subcategoria": "processador",
+            "categoria": "hardware",
+            "imagem":"https://images9.kabum.com.br/produtos/fotos/129459/processador-amd-ryzen-9-5900x-cache-70mb-3-7ghz-4-8ghz-max-turbo-am4-100-100000063wof_1602600708_g.jpg",
+            "descricao":["O único com tecnologia AMD 3D V-Cache, permitindo obter máximo desempenho nos jogos de alta velocidade. Conhecido também como o melhor processador de desktop do mundo, este modelo possui 8 núcleos otimizados para plataformas de jogos FPS e também funciona de maneira excelente para criadores que necessitam de velocidade e processamento dedicado.", "Os núcleos mais rápidos do mundo para jogadores de PC, a arquitetura Zen 3 de alto desempenho é um redesenho básico da lendária família Zen. Equipado com aprimoramentos de design de ponta a ponta, o Zen 3 traz o foco no desempenho de núcleo único, eficiência de energia e latências reduzidas.", "Um jeito rápido e fácil de expandir e acelerar o armazenamento nos PCs com um processador AMD Ryzen, a tecnologia AMD StoreMI é uma ferramenta bastante eficaz para fãs de PCs que desejam incrementar os tempos de carregamento e boot, o gerenciamento de arquivos ou a capacidade de resposta.", "Um utilitário de overclocking simples e potente para os processadores AMD Ryzen, o AMD Ryzen Master oferece suporte a diversos produtos e recursos de CPU, com uma visão básica que fornece acesso aos recursos e telemetria mais essenciais. Você também pode alternar para a visão avançada e visualizar recursos de overclock mais adequados para a sua necessidade."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":1499.99, 
+                    "quantidade": 3,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/129459/processador-amd-ryzen-7-5800x-3-8ghz-4-7ghz-max-turbo-cache-36mb-octa-core-16-threads-am4-100-100000063wof"
+                },
+                {
+                    "loja":"WAZ", 
+                    "preco":1273.40, 
+                    "quantidade": 1,
+                    "icone":"https://media.licdn.com/dms/image/v2/C560BAQHw-i2QUNtsQg/company-logo_200_200/company-logo_200_200/0/1630570091611/wazlive_logo?e=2147483647&v=beta&t=jQPd0h3UPXNJku8lsOOfAJfFVSMpJyYtjAEVjz1DEkU",
+                    "link": "https://www.waz.com.br/processador-amd-ryzen-7-5800x-am4-8-nucleos-16-threads-3-8ghz-121275-html/p"
+                },
+                {
+                    "loja":"SAB Automação Comercial", 
+                    "preco":2179.93, 
+                    "quantidade": 5,
+                    "icone": "https://salescdn.net/9cfXSmUlp9L0Pn5pJiOTflK6xrY=/adaptive-fit-in/0x0/prod/store/14167/medias/storage/1724353912452.webp",
+                    "link": "https://sabautomacao.com.br/processador-amd-ryzen-7-5800x-am4-100100000063wofi-p175"
+                }]            
+        },
+        "produto14":
+       {"id":14,
+            "nome": "Processador Intel Core i5-12400F",
+            "subcategoria": "processador",
+            "categoria": "hardware",
+            "imagem":"https://images8.kabum.com.br/produtos/fotos/283718/processador-intel-core-i5-12400f-cache-xmb-xghz-xghz-max-turbo-lga-1700-bx8071512400f_1640094446_g.jpg",
+            "descricao":["Processador Intel Core i5-12400F da 12ª Geração para desktop, sem gráficos do processador. Com compatibilidade com PCIe 5.0 e 4.0, e compatibilidade com DDR5 e DDR4, os processadores Intel Core i5 da 12ª Geração para desktop foram otimizados para gamers entusiastas e produtividade, e ajudam a oferecer alto desempenho. Requer gráficos discretos. Intel Laminar RM1 incluído na caixa. Compatível com placas-mãe equipadas com chipset Intel série 600. Potência de base do processador 65W.", "Jogo sem compromisso. A arquitetura híbrida de desempenho do processador Intel Core de 12ª geração inclui 6 núcleos de desempenho (P-core), com carga de trabalho encaminhada de forma inteligente pelo Intel Thread Director 2 - divide, então você pode conquistar.", "Os processadores Intel Core de 12ª geração oferecem arquitetura altamente flexível e ferramentas de overclocking líderes do setor para o máximo em personalização de desempenho.", "Com Intel Wi-Fi 6E e Thunderbolt 4, você obtém canais Wi-Fi exclusivos de alta velocidade e a porta mais versátil disponível."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":799.99, 
+                    "quantidade": 3,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/283718/processador-intel-core-i5-12400f-2-5ghz-4-4ghz-max-turbo-cache-18mb-lga-1700-bx8071512400f"
+                },
+                {
+                    "loja":"Terabyte", 
+                    "preco":799.9, 
+                    "quantidade": 1,
+                    "icone":"https://www.overloadgames.com.br/img/parceiros/terabyte-shop/terabyte-shop.png",
+                    "link": "https://www.terabyteshop.com.br/produto/20072/processador-intel-core-i5-12400f-25ghz-44ghz-turbo-12-geracao-6-cores-12-threads-lga-1700-bx8071512400f?srsltid=AfmBOoqBlM1jj9h90cXURQ4kAjQQKMR6p6CgJ2qNGM-QvV38xCMFyzqI"
+                },
+                {
+                    "loja":"Concórdia", 
+                    "preco":1708.5, 
+                    "quantidade": 5,
+                    "icone": "https://images.tcdn.com.br/files/740836/themes/324/img/settings/logo.svg?955468e9c50ef83f76a2ef0269c00f2f",
+                    "link": "https://www.concordia.inf.br/processador-intel-core-i5-12400f-2-5ghz-4-4ghz-turbo-12a-geracao-6-cores-12-threads-lga-1700-oem-tray-sem-cooler?srsltid=AfmBOoqfqWD-ahy8ZHtFDuTcxLRTwXLu1-ZuGSBsPAObnn-mobv-tBCt"
+                }]            
+        },
+        "produto15":
+       {"id":15,
+            "nome": "Processador AMD Ryzen 5 4600G",
+            "subcategoria": "processador",
+            "categoria": "hardware",
+            "imagem":"https://images5.kabum.com.br/produtos/fotos/333145/processador-amd-ryzen-5-4600g-cache-11mb-3-7ghz-4-2ghz-max-turbo-am4-video-integrado-100-100000147box_1653338731_g.jpg",
+            "descricao":["Esteja você jogando, trabalhando ou fazendo as tarefas do cotidiano, a velocidade sem precedentes dos processadores AMD Ryzen série 4000 G para desktop é imparável. Com os processadores AMD Ryzen para desktop, você está sempre na frente.", "O processador de desktop AMD Ryzen 5 4600G oferece excelentes gráficos integrados em um processador de desktop. Jogue com Radeon Graphics com 7 Núcleos de GPU e Frequência gráfica de 1900 MHz.", "O AMD Ryzen 5 4600G ainda conta com 6 núcleos e 12 threads, impulsionando o desempenho do seu Computador com clocks de até 4,2 Ghz com Max Boost e 8MB de cache L3 total.", "Para usuários que querem uma experiência de realidade virtual premium, a AMD oferece os processadores de alto desempenho Ryzen VR-Ready Premium."],
+            "lojas":[
+                {
+                    "loja":"Kabum", 
+                    "preco":698.99, 
+                    "quantidade": 1,
+                    "icone": "https://static.poder360.com.br/2023/02/logo-kabum-848x477.png",
+                    "link": "https://www.kabum.com.br/produto/333145/processador-amd-ryzen-5-4600g-3-7ghz-4-2ghz-max-turbo-cache-11mb-am4-video-integrado-100-100000147box"
+                },
+                {
+                    "loja":"Terabyte", 
+                    "preco":728.9, 
+                    "quantidade": 1,
+                    "icone":"https://www.overloadgames.com.br/img/parceiros/terabyte-shop/terabyte-shop.png",
+                    "link": "https://www.terabyteshop.com.br/produto/21317/processador-amd-ryzen-5-4600g-37ghz-42ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4-100-100000147box?srsltid=AfmBOopPbPng9CahFRAYpmQLc2VhujaqGvW47oPei3bUNuiyNaCuAOTQ"
+                },
+                {
+                    "loja":"Pichau", 
+                    "preco": 728.99, 
+                    "quantidade": 1,
+                    "icone":"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/d/AmazonStores/A2Q3Y263D00KWC/2efabdc0c2a040a4ceedd222f21a3b3f.w400.h400.png",
+                    "link": "https://www.pichau.com.br/processador-amd-ryzen-5-4600g-6-core-12-threads-3-7ghz-4-2ghz-turbo-cache-11mb-am4-100-100000147box?srsltid=AfmBOooHGZGxpGJ4eW6-11xa6KC-DnSN5JJKbxyyDn44mFYDX9qfrzXf"
+                }]            
         }
+        
     }
 
 

@@ -24,14 +24,14 @@
   // Procurar o produto pela categoria
   foreach ($produtos as $produto) { 
     if($produto['categoria'] == "hardware"){
-      if(in_array($produto['tipo'], $tipos_hardwares)){
+      if(in_array($produto['subcategoria'], $tipos_hardwares)){
       } else{
-        array_push($tipos_hardwares, $produto['tipo']);
+        array_push($tipos_hardwares, $produto['subcategoria']);
       }
     } else if($produto['categoria'] == "periferico"){
-      if(in_array($produto['tipo'], $tipos_perifericos)){
+      if(in_array($produto['subcategoria'], $tipos_perifericos)){
       } else{
-        array_push($tipos_perifericos, $produto['tipo']);
+        array_push($tipos_perifericos, $produto['subcategoria']);
       }
     }
   }
@@ -88,7 +88,7 @@
           }
         }
 
-        if($valorProcurado == $produto['tipo']) {
+        if($valorProcurado == $produto['subcategoria']) {
           echo "<a href='produto.php?id={$produto['id']}'>
             <div class='product-card bg-white d-flex flex-column rounded p-2'>
               <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
