@@ -101,7 +101,7 @@ $json = file_get_contents("produtos.json");
                   <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
                   <span class='fw-bold'>{$produto['nome']}</span>
                   <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
-                  <span>Menro Preço - R$".$menor_preco."</span>
+                  <span>Menor Preço - R$".$menor_preco."</span>
                 </div>
               </a>";
               $encontrado += 1;
