@@ -30,7 +30,6 @@ foreach ($produtos as $produto) {
 
 ?>
 
-<div class="content-wraper">
   <div class="d-flex flex-row header">
     <a href="index.php"><h3>Peça Fácil</h3></a>
 
@@ -43,7 +42,7 @@ foreach ($produtos as $produto) {
       </form>
 
     <div class="d-flex flex-row gap-2 icones">
-      <a href="./pages/favoritos.php" class="icon">
+      <!-- <a href="./pages/favoritos.php" class="icon">
         <img src="./assets/icons/heart-regular.svg"  alt="">
       </a>
       <a href="./pages/alertas.php" class="icon">
@@ -59,7 +58,7 @@ foreach ($produtos as $produto) {
               <span>fazer cadastro</span>
             </div>
           </div>
-      </a>     
+      </a> -->
     </div>
 
   </div>
@@ -102,4 +101,3 @@ foreach ($produtos as $produto) {
     <div class="linha-vertical"> </div>
     <a class="menu-item" href="lojas.php">Lojas Parceiras</a>
   </div>
-</div>

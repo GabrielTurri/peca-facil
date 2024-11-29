@@ -68,78 +68,80 @@ if ($produto_selecionado === null) {
   <title>Peça Fácil</title>
 </head>
 <body>
-<?php include_once('./components/header.php') ?>
+  <div class="page-container">
+    <div class="content-wrap">
+      <?php include_once('./components/header.php') ?>
 
-<div class="content-wraper">
-  <div class="produto-container">
+      <div class="produto-container">
 
-  <a href="./index.php" class="botao-voltar">
-    Voltar ao início
-  </a>
-  <div class="d-flex flex-row produto-info">
-    <?php
-      echo "<img class='imagem' src='{$produto_selecionado['imagem']}' alt='imagem do produto'>";
-      echo "<div class='d-flex flex-column'>";
-      echo "<span class='title'>{$produto_selecionado['nome']}</span>";
-      
-      $menor_preco = 99999;
-      $loja_menor_preco = ""; 
-      $link_loja = "";
+        <a href="./index.php" class="botao-voltar">
+          Voltar ao início
+        </a>
+        <div class="d-flex flex-row produto-info">
+          <?php
+            echo "<img class='imagem' src='{$produto_selecionado['imagem']}' alt='imagem do produto'>";
+            echo "<div class='d-flex flex-column'>";
+            echo "<span class='title'>{$produto_selecionado['nome']}</span>";
+            
+            $menor_preco = 99999;
+            $loja_menor_preco = ""; 
+            $link_loja = "";
 
-      foreach($produto_selecionado['lojas'] as $loja){
-        if($loja['preco'] < $menor_preco){
-          $menor_preco = $loja['preco'];
-          $loja_menor_preco = $loja['loja'];
-          $link_loja = $loja['link'];
+            foreach($produto_selecionado['lojas'] as $loja){
+              if($loja['preco'] < $menor_preco){
+                $menor_preco = $loja['preco'];
+                $loja_menor_preco = $loja['loja'];
+                $link_loja = $loja['link'];
 
-        }
-      }
-      echo "
-        <span class='sm-text'>Melhor oferta:</span>
-        <span class='preco'>R$".$menor_preco."</span>
-        <span class='sm-text'>em <a href='{$link_loja}' target='_blank'>{$loja_menor_preco}</a></span>
-      ";
-      echo "</div></div>";
-      echo "<h3>Descrição do produto:</h3>";
-      foreach($produto_selecionado['descricao'] as $descricao){
-          echo "<p>{$descricao}</p>";
-      }
-    ?>
-  
-  <div class="lista-lojas d-flex flex-column">  
-    <?php
-      echo "<h2>Ofertas nas lojas</h2>";
-      foreach($produto_selecionado['lojas'] as $loja){
-        if($loja['quantidade'] > 0){
+              }
+            }
+            echo "
+              <span class='sm-text'>Melhor oferta:</span>
+              <span class='preco'>R$".$menor_preco."</span>
+              <span class='sm-text'>em <a href='{$link_loja}' target='_blank'>{$loja_menor_preco}</a></span>
+            ";
+            echo "</div></div>";
+            echo "<h3>Descrição do produto:</h3>";
+            foreach($produto_selecionado['descricao'] as $descricao){
+                echo "<p>{$descricao}</p>";
+            }
+          ?>
+        
+        <div class="lista-lojas d-flex flex-column">  
+          <?php
+            echo "<h2>Ofertas nas lojas</h2>";
+            foreach($produto_selecionado['lojas'] as $loja){
+              if($loja['quantidade'] > 0){
 
-          echo "
-          <div class='d-flex flex-row oferta'>
-            <div class='d-flex flex-row gap-2'>
-              <img class='logo-loja' src='{$loja['icone']}' alt='logo da loja'>
-              <div class='d-flex flex-column'>
-                <span class='title'>{$loja['loja']}</span>
-                <span class='preco'>R$"."{$loja['preco']}</span>";
-          if($loja['quantidade'] == 1){
-            echo "<span class='ultima-unid'>Última unidade!</span>";
-          }
-          echo"              
+                echo "
+                <div class='d-flex flex-row oferta'>
+                  <div class='d-flex flex-row gap-2'>
+                    <img class='logo-loja' src='{$loja['icone']}' alt='logo da loja'>
+                    <div class='d-flex flex-column'>
+                      <span class='title'>{$loja['loja']}</span>
+                      <span class='preco'>R$"."{$loja['preco']}</span>";
+                if($loja['quantidade'] == 1){
+                  echo "<span class='ultima-unid'>Última unidade!</span>";
+                }
+                echo"              
+                      </div>
+                    </div>
+                    <a href='{$loja['link']}' target='_blank'>
+                    <button class='botao-produto'>Ir à loja</button>
+                  </a>
                 </div>
-              </div>
-              <a href='{$loja['link']}' target='_blank'>
-              <button class='botao-produto'>Ir à loja</button>
-            </a>
-          </div>
-          ";
-          }
-      }     
-    ?>
+                ";
+                }
+            }     
+          ?>
+        </div>
+      </div>
     </div>
+
+    <?php include_once('./components/footer.html'); ?>
   </div>
-</div>
-  
-  <?php include_once('./components/footer.html');  ?> 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -54,72 +54,72 @@ $json = file_get_contents("produtos.json");
   <title>Peça Fácil</title>
 </head>
 <body>
-<?php include_once('./components/header.php') ?>
+  <div class="page-container">
+    <div class="content-wrap">
+      <?php include_once('./components/header.php') ?>
 
-<div class="content-wraper">
+      <a href="./index.php" class="botao-voltar">
+        Voltar ao início
+      </a>
+      <h2>Resultados da Pesquisa:</h2>
+      <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center">
+      <?php
 
-  <a href="./index.php" class="botao-voltar">
-    Voltar ao início
-  </a>
-  <h2>Resultados da Pesquisa:</h2>
-  <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center">
-  <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          $json = file_get_contents("produtos.json");
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $json = file_get_contents("produtos.json");
+          if ($json === false) {
+            die("Erro ao ler o json");
+          }
 
-      if ($json === false) {
-        die("Erro ao ler o json");
-      }
+          $valorProcurado = $_POST['busca'];
 
-      $valorProcurado = $_POST['busca'];
+          $encontrado = 0;
 
-      $encontrado = 0;
+          $produtos = json_decode($json, true);
+                    
+          // Verificar se a decodificação foi bem-sucedida
+          if ($produtos === null) {
+            die('Erro ao ler o arquivo JSON');
+          }
 
-      $produtos = json_decode($json, true);
-                 
-      // Verificar se a decodificação foi bem-sucedida
-      if ($produtos === null) {
-        die('Erro ao ler o arquivo JSON');
-      }
+          // Procurar o produto pelo nome
+          foreach ($produtos as $produto) {
+            $menor_preco = 99999;
+            $loja_menor_preco = "";
+            
+            foreach($produto['lojas'] as $loja){
+              if($loja['preco'] < $menor_preco){
+                $menor_preco = $loja['preco'];
+                $loja_menor_preco = $loja['loja'];
+              }
+            }
 
-      // Procurar o produto pelo nome
-      foreach ($produtos as $produto) {
-        $menor_preco = 99999;
-        $loja_menor_preco = "";
-        
-        foreach($produto['lojas'] as $loja){
-          if($loja['preco'] < $menor_preco){
-            $menor_preco = $loja['preco'];
-            $loja_menor_preco = $loja['loja'];
+            if(stripos($produto['nome'], $valorProcurado) !== false){
+              echo "<a href='produto.php?id={$produto['id']}'>
+                <div class='product-card bg-white d-flex flex-column rounded p-2'>
+                  <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
+                  <span class='fw-bold'>{$produto['nome']}</span>
+                  <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
+                  <span>Menro Preço - R$".$menor_preco."</span>
+                </div>
+              </a>";
+              $encontrado += 1;
+            } 
+          }  
+          if ($encontrado == 0){
+            echo "<h3>Produto não encontrado!</h3>";
           }
         }
-
-        if(stripos($produto['nome'], $valorProcurado) !== false){
-          echo "<a href='produto.php?id={$produto['id']}'>
-            <div class='product-card bg-white d-flex flex-column rounded p-2'>
-              <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
-              <span class='fw-bold'>{$produto['nome']}</span>
-              <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
-              <span>Menro Preço - R$".$menor_preco."</span>
-            </div>
-          </a>";
-          $encontrado += 1;
-        } 
-      }  
-      if ($encontrado == 0){
-        echo "<h3>Produto não encontrado!</h3>";
-      }
-    }
-    else{
-      header("Location: index.php");
-      exit;
-    }
-  ?>
+        else{
+          header("Location: index.php");
+          exit;
+        }
+      ?>
+      </div>
+    </div>
+    <?php include_once('./components/footer.html'); ?>
   </div>
-  </div>
-
-  <?php include_once('./components/footer.html');  ?> 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

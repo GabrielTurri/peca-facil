@@ -44,11 +44,18 @@
   </div>
 
 </div>
-
-<?php include_once('./components/footer.html'); ?> 
-
 </body>
 
+<footer>
+  <div class="footer-content">
+    <span><b>© 2024</b> Peça Fácil</span>
+    <span>Desenvolvido por:</span>
+    <span>Gabriel Turri</span>
+    <span>Felipe Haddad</span>
+    <span>Emerson Rodrigues</span>
+    <span>Victor Hugo</span>
+  </div>
+</footer>
 
 
 </html>

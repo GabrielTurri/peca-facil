@@ -47,96 +47,94 @@
 </head>
 <body>
 
-<?php include_once('./components/header.php') ?>
+  <div class="page-container">
+    <div class="content-wrap">
+      <?php include_once('./components/header.php') ?>
+      
+      <h3>Produtos em destaque</h3>
+      <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center align-items-start">
+        <?php
 
-<div class="content-wraper">
-  
-  <h3>Produtos em destaque</h3>
-  <div class="d-flex flex-row flex-wrap gap-2 my-2 justify-content-center align-items-start">
-    <?php
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $valorProcurado = $_POST['busca'];
 
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $valorProcurado = $_POST['busca'];
+            $encontrado = 0;
+                      
+            // Verificar se a decodificação foi bem-sucedida
+            if ($produtos === null) {
+              die('Erro ao ler o arquivo JSON');
+            }
 
-        $encontrado = 0;
-                  
-        // Verificar se a decodificação foi bem-sucedida
-        if ($produtos === null) {
-          die('Erro ao ler o arquivo JSON');
-        }
+            // Procurar o produto pelo nome
+            foreach ($produtos as $produto) {
+              $menor_preco = 99999;
+              $loja_menor_preco = "";
+              
+              foreach($produto['lojas'] as $loja){
+                if($loja['preco'] < $menor_preco){
+                  $menor_preco = $loja['preco'];
+                  $loja_menor_preco = $loja['loja'];
+                }
+              }
 
-        // Procurar o produto pelo nome
-        foreach ($produtos as $produto) {
-          $menor_preco = 99999;
-          $loja_menor_preco = "";
-          
-          foreach($produto['lojas'] as $loja){
-            if($loja['preco'] < $menor_preco){
-              $menor_preco = $loja['preco'];
-              $loja_menor_preco = $loja['loja'];
+              $preco_medio = round($soma_preco/$qtde_lojas,2);
+              if(stripos($produto['nome'], $valorProcurado) !== false){
+                echo "
+                <a href='produto.php?id={$produto['id']}'>
+                  <div class='product-card d-flex flex-column rounded p-2 h-100'>
+                    <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
+                    <span class='fw-bold'>{$produto['nome']}</span>
+                    <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
+                    <span>Menro Preço - R$".$menor_preco."</span>
+                  </div>
+                </a>";
+                $encontrado += 1;
+              } 
+            }  
+            if ($encontrado == 0){
+              echo "<h3>Produto não encontrado!</h3>";
             }
           }
+          else{
+            
+            // criar o card de cada produto
+            foreach($produtos as $produto){
+              $menor_preco = 99999;
+              $loja_menor_preco = ""; 
+              $quantidade_total = 0;
+              
+              foreach($produto['lojas'] as $loja){
+                if($loja['preco'] < $menor_preco){
+                  $menor_preco = $loja['preco'];
+                  $loja_menor_preco = $loja['loja'];
+                }
 
-          $preco_medio = round($soma_preco/$qtde_lojas,2);
-          if(stripos($produto['nome'], $valorProcurado) !== false){
-            echo "
-            <a href='produto.php?id={$produto['id']}'>
-              <div class='product-card d-flex flex-column rounded p-2 h-100'>
+                if($loja['quantidade'] > 0){
+                  $quantidade_total += $loja['quantidade'];
+                }
+              }
+              if($quantidade_total > 0){
+
+                
+                echo "<a href='produto.php?id={$produto['id']}'>
+                <div class='product-card bg-white h-100 d-flex flex-column rounded p-2'>
                 <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
                 <span class='fw-bold'>{$produto['nome']}</span>
                 <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
-                <span>Menro Preço - R$".$menor_preco."</span>
-              </div>
-            </a>";
-            $encontrado += 1;
-          } 
-        }  
-        if ($encontrado == 0){
-          echo "<h3>Produto não encontrado!</h3>";
-        }
-      }
-      else{
-        
-        // criar o card de cada produto
-        foreach($produtos as $produto){
-          $menor_preco = 99999;
-          $loja_menor_preco = ""; 
-          $quantidade_total = 0;
-          
-          foreach($produto['lojas'] as $loja){
-            if($loja['preco'] < $menor_preco){
-              $menor_preco = $loja['preco'];
-              $loja_menor_preco = $loja['loja'];
-            }
-
-            if($loja['quantidade'] > 0){
-              $quantidade_total += $loja['quantidade'];
+                <span>Menor Preço - R$".$menor_preco."</span>
+                </div>
+                </a>";
+              }
             }
           }
-          if($quantidade_total > 0){
-
-            
-            echo "<a href='produto.php?id={$produto['id']}'>
-            <div class='product-card bg-white h-100 d-flex flex-column rounded p-2'>
-            <img class='imagem rounded' src='{$produto['imagem']}' alt='imagem do produto'>
-            <span class='fw-bold'>{$produto['nome']}</span>
-            <span>Menor preço via <i><strong>{$loja_menor_preco}!</strong></i></span>
-            <span>Menor Preço - R$".$menor_preco."</span>
-            </div>
-            </a>";
-          }
-        }
-      }
-
-      echo "</div>";
-      ?>
-    </div>  
-
-  <?php include_once('./components/footer.html'); ?>
+          ?>
+      </div>  
+    </div>
+    <?php include_once('./components/footer.html'); ?>
+  </div>  
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-
 </html>
