@@ -31,7 +31,9 @@ foreach ($produtos as $produto) {
 ?>
 
   <div class="d-flex flex-row header">
-    <a href="index.php"><h3>Peça Fácil</h3></a>
+    <a href="index.php">
+      <img src="./assets/logo.png" alt="Logo do Peça Fácil" class="logo-img">
+    </a>
 
       <form class="d-flex flex-row search-input" action="pesquisa.php" method="POST">
         <input type="text" name="busca" class="input-pesquisar" autofocus placeholder="Digite o que procura...">

@@ -76,7 +76,7 @@
       foreach ($lojas as $loja) {
         echo "
           <a href='{$loja->link}' target='_blank'>
-            <div class='bg-white p-3 rounded text-center card-loja'>
+            <div class='bg-white p-3 rounded text-center card-loja shadow'>
               <img class='logo-loja' src='{$loja->icone}' alt='Icone da loja'>
               <h3>{$loja->nome}</h3>
             </div>

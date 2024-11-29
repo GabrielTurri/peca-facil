@@ -77,18 +77,6 @@
 .icon img {
     width: 20px;
 }
-
-.icones .icon img {
-    width: 36px;
-}
-
-.icones img {
-    border-radius: 8px;
-    padding: 8px;
-
-}
-
-
-.icones img:hover {
-    background-color: #bbb;
+.logo-img {
+    width: 200px;
 }
